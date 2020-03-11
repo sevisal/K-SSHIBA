@@ -69,7 +69,7 @@ paper_res = pickle.load( open( 'Paper_results.pkl', "rb" ), encoding='latin1' )
 def Baselines_func(folds, base):
 # In[]:
     # database = 'Satellite' #Here we specify the desired database
-    database = 'atp7d'
+    database = 'atp1d'
     print('Loaded database: '+database)
     
     from scipy.io import arff
@@ -110,9 +110,9 @@ def Baselines_func(folds, base):
     import copy
     from sklearn.decomposition import PCA
     from sklearn.cross_decomposition import CCA
-    # from sklearn.svm import SVC
+    from sklearn.svm import SVR
+    from sklearn.kernel_ridge import KernelRidge
     from sklearn.model_selection import GridSearchCV
-    from sklearn.preprocessing import LabelBinarizer
     from sklearn.preprocessing import StandardScaler
     from sklearn.linear_model import LinearRegression
     from sklearn.metrics import mean_squared_error as mse
@@ -121,7 +121,7 @@ def Baselines_func(folds, base):
     verbose = 0
     verboseprint = print if verbose else lambda *a, **k: None
     
-    bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR', '_KRR', '_SVMrbf', '_NN'] # Name of the baseline
+    bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR', '_KRR', '_SVRrbf', '_NN'] # Name of the baseline
     for base in bases:
         # We separate the baseline into the different options available
         pipeline = base.split('_')
@@ -210,6 +210,24 @@ def Baselines_func(folds, base):
                     Y_pred = reg.predict(P_tst)
                     results[base]['R2'][i] = r2_score(Y_tst, Y_pred, multioutput = 'uniform_average') # = 'variance_weighted') 
                     results[base]['mse'][i] = mse(Y_tst, Y_pred, multioutput = 'uniform_average') 
+                elif pipeline[1] == 'SVRrbf':
+                    # SVM rbf, no lineal.
+                    # Hyperparameters determined using grid search 10 fold cross validation.
+                    grid = {"C": np.logspace(-4,4,11), "gamma": np.array([0.125, 0.25, 0.5, 1, 2, 4, 8])/(np.sqrt(Y_tr.shape[1]))}
+                    clf = SVR(kernel = 'rbf')
+                    clf_cv = GridSearchCV(clf, grid, cv=10)
+                    clf_cv.fit(P_tr,Y_tr)
+                    results[base]['R2'][i] = r2_score(Y_tst, clf_cv.predict(P_tst), multioutput = 'uniform_average') # = 'variance_weighted') 
+                    results[base]['mse'][i] = mse(Y_tst, clf_cv.predict(P_tst), multioutput = 'uniform_average') 
+                elif pipeline[1] == 'KRR':
+                    # SVM rbf, no lineal.
+                    # Hyperparameters determined using grid search 10 fold cross validation.
+                    grid = {"alpha": np.logspace(-2*10,2,11), "gamma": np.logspace(-2*10,2,11)/(np.sqrt(Y_tr.shape[1]))}
+                    clf = KernelRidge(kernel = 'rbf')
+                    clf_cv = GridSearchCV(clf, grid, cv=10)
+                    clf_cv.fit(P_tr,Y_tr)
+                    results[base]['R2'][i] = r2_score(Y_tst, clf_cv.predict(P_tst), multioutput = 'uniform_average') # = 'variance_weighted') 
+                    results[base]['mse'][i] = mse(Y_tst, clf_cv.predict(P_tst), multioutput = 'uniform_average') 
                 else:
                     try:
                         results[base]['R2'][i] = r2_score(Y_tst, cca.predict(K_tst), multioutput = 'uniform_average') # = 'variance_weighted') 
