@@ -11,6 +11,11 @@ foldername = os.path.basename(dirpath)
 os.sys.path.append(prv_fold +'/lib/')
 os.sys.path.append(prv_fold +'\\lib\\')
 
+if os.path.exists("he_terminado.txt"):
+  os.remove("he_terminado.txt")
+else:
+  print("The script has started.")
+
 
 def calcAUC(Y_pred, Y_tst):
     n_classes = Y_pred.shape[1]
@@ -61,8 +66,8 @@ my_dict['atp7d'] =  [6]
 my_dict['oes97'] =  [16]
 my_dict['oes10'] =  [16]
 my_dict['edm'] =    [2]
-# my_dict['sf1'] =    [3] 
-# my_dict['sf2'] =    [3] 
+# my_dict['sf1'] =    [3]
+# my_dict['sf2'] =    [3]
 my_dict['jura'] =   [3]
 my_dict['wq'] =     [14]
 my_dict['enb'] =    [2]
@@ -135,7 +140,7 @@ def Baselines_func(folds, base, database):
     verboseprint = print if verbose else lambda *a, **k: None
     
     # bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR', '_KRR', '_SVRrbf', '_NN'] # Name of the baseline
-    bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR']
+    bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR', '_SVRrbf']
     for base in bases:
         # We separate the baseline into the different options available
         pipeline = base.split('_')
@@ -259,7 +264,7 @@ def Baselines_func(folds, base, database):
                     results[base]['mse'][i] = mse(Y_tst, clf_cv.predict(P_tst), multioutput = 'uniform_average') 
                 elif pipeline[1] == 'NN':
                     grid = {"hidden_layer_sizes": [(100,), (100,50,100), (50,100,50)],
-                            "activation": ["identity", "logistic", "tanh", "relu"],
+                            "activation": ["logistic", "tanh", "relu"],
                             "solver": ["adam"],
                             "alpha": [0.00005, 0.0005]
                             }
@@ -309,4 +314,6 @@ for database in paper_res:
     print("-----------------------")
     print(database)
     Baselines_func(10,'base', database)
+    
+file1 = open("he_terminado.txt","w")
         
