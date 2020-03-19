@@ -1,0 +1,125 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/Users/alexjorguer/anaconda3/pkgs/applaunchservices-0.2.1-py_0",
+  "features": "",
+  "files": [
+    "lib/python3.7/site-packages/applaunchservices-0.2.1.dist-info/INSTALLER",
+    "lib/python3.7/site-packages/applaunchservices-0.2.1.dist-info/LICENSE.txt",
+    "lib/python3.7/site-packages/applaunchservices-0.2.1.dist-info/METADATA",
+    "lib/python3.7/site-packages/applaunchservices-0.2.1.dist-info/RECORD",
+    "lib/python3.7/site-packages/applaunchservices-0.2.1.dist-info/WHEEL",
+    "lib/python3.7/site-packages/applaunchservices-0.2.1.dist-info/top_level.txt",
+    "lib/python3.7/site-packages/applaunchservices/__init__.py",
+    "lib/python3.7/site-packages/applaunchservices/_dummy.py",
+    "lib/python3.7/site-packages/applaunchservices/_ls.py",
+    "lib/python3.7/site-packages/applaunchservices/__pycache__/__init__.cpython-37.pyc",
+    "lib/python3.7/site-packages/applaunchservices/__pycache__/_dummy.cpython-37.pyc",
+    "lib/python3.7/site-packages/applaunchservices/__pycache__/_ls.cpython-37.pyc"
+  ],
+  "fn": "applaunchservices-0.2.1-py_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/Users/alexjorguer/anaconda3/pkgs/applaunchservices-0.2.1-py_0",
+    "type": 1
+  },
+  "md5": "f4ae4a913473de221121b4b81dc3e806",
+  "name": "applaunchservices",
+  "noarch": "python",
+  "package_tarball_full_path": "/Users/alexjorguer/anaconda3/pkgs/applaunchservices-0.2.1-py_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/applaunchservices-0.2.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/applaunchservices-0.2.1.dist-info/LICENSE.txt",
+        "path_type": "hardlink",
+        "sha256": "f522ae2dc01a561c5687ceaa0f2b3cee565d895a3cc46ef69a6e140dc9090a05",
+        "sha256_in_prefix": "f522ae2dc01a561c5687ceaa0f2b3cee565d895a3cc46ef69a6e140dc9090a05",
+        "size_in_bytes": 1070
+      },
+      {
+        "_path": "site-packages/applaunchservices-0.2.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "93e7fb571edd4ec5590e01154b932b085e819f56a3068c9c07e48806e5e9dea7",
+        "sha256_in_prefix": "93e7fb571edd4ec5590e01154b932b085e819f56a3068c9c07e48806e5e9dea7",
+        "size_in_bytes": 3462
+      },
+      {
+        "_path": "site-packages/applaunchservices-0.2.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "95aa402b7e5f0b14affd2fb1ed844fc13c4e9a57b0fc189d9fd60f79c987e849",
+        "sha256_in_prefix": "95aa402b7e5f0b14affd2fb1ed844fc13c4e9a57b0fc189d9fd60f79c987e849",
+        "size_in_bytes": 892
+      },
+      {
+        "_path": "site-packages/applaunchservices-0.2.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "23bf6aa29589ebd9794fac196b2b7d55438c79c19918fceedbf89c6d16168e92",
+        "sha256_in_prefix": "23bf6aa29589ebd9794fac196b2b7d55438c79c19918fceedbf89c6d16168e92",
+        "size_in_bytes": 93
+      },
+      {
+        "_path": "site-packages/applaunchservices-0.2.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "30716ae1d5b0db817907182f0b967ae41d6756ee83b44a11f192f8d9259fbcf7",
+        "sha256_in_prefix": "30716ae1d5b0db817907182f0b967ae41d6756ee83b44a11f192f8d9259fbcf7",
+        "size_in_bytes": 18
+      },
+      {
+        "_path": "site-packages/applaunchservices/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "a925d180bf95dc0040c9b44d7518cdb98bb410abe76922a5ae8ed7a07d98ea5c",
+        "sha256_in_prefix": "a925d180bf95dc0040c9b44d7518cdb98bb410abe76922a5ae8ed7a07d98ea5c",
+        "size_in_bytes": 1663
+      },
+      {
+        "_path": "site-packages/applaunchservices/_dummy.py",
+        "path_type": "hardlink",
+        "sha256": "fb38c37777824951b2638ea54ec70f576433a7a30c0cac5baf6309590ba39094",
+        "sha256_in_prefix": "fb38c37777824951b2638ea54ec70f576433a7a30c0cac5baf6309590ba39094",
+        "size_in_bytes": 1031
+      },
+      {
+        "_path": "site-packages/applaunchservices/_ls.py",
+        "path_type": "hardlink",
+        "sha256": "3b1d98617496f8dbdeddc0aaf5062e81b54aa4e2795fe32895d4828f3935cef9",
+        "sha256_in_prefix": "3b1d98617496f8dbdeddc0aaf5062e81b54aa4e2795fe32895d4828f3935cef9",
+        "size_in_bytes": 2531
+      },
+      {
+        "_path": "lib/python3.7/site-packages/applaunchservices/__pycache__/__init__.cpython-37.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.7/site-packages/applaunchservices/__pycache__/_dummy.cpython-37.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.7/site-packages/applaunchservices/__pycache__/_ls.cpython-37.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "applaunchservices==0.2.1=py_0",
+  "sha256": "c6a887c910f3876511bd302c53efa1e8cc991d65b385e69e8ed76869ac59cbfb",
+  "size": 8752,
+  "subdir": "noarch",
+  "timestamp": 1575415339112,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/applaunchservices-0.2.1-py_0.tar.bz2",
+  "version": "0.2.1"
+}

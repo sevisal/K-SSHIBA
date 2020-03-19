@@ -1,0 +1,115 @@
+{
+  "build": "py37_9",
+  "build_number": 9,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.7,<3.8.0a0"
+  ],
+  "extracted_package_dir": "/Users/alexjorguer/anaconda3/pkgs/python.app-2-py37_9",
+  "features": "",
+  "files": [
+    "bin/python.app",
+    "bin/pythonw",
+    "python.app/Contents/Info.plist",
+    "python.app/Contents/MacOS/python",
+    "python.app/Contents/PkgInfo",
+    "python.app/Contents/Resources/empty.lproj",
+    "python.app/Contents/Resources/qt_menu.nib/classes.nib",
+    "python.app/Contents/Resources/qt_menu.nib/info.nib",
+    "python.app/Contents/Resources/qt_menu.nib/keyedobjects.nib"
+  ],
+  "fn": "python.app-2-py37_9.conda",
+  "legacy_bz2_md5": "bd62aa063f069b74dc2cb11eda00fc7e",
+  "legacy_bz2_size": 1403540,
+  "license": "BSD",
+  "link": {
+    "source": "/Users/alexjorguer/anaconda3/pkgs/python.app-2-py37_9",
+    "type": 1
+  },
+  "md5": "96dda7434ea502dec8e87c03b7c5cc49",
+  "name": "python.app",
+  "package_tarball_full_path": "/Users/alexjorguer/anaconda3/pkgs/python.app-2-py37_9.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/python.app",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "3c7c258ec374e2c0cdd341b141ab5b1b0ef6cfcab5f0549c883bc49bdb1e6ec3",
+        "sha256_in_prefix": "0a39ed21b48ab9f9d47ee5ccf899c44af1320dde70f25a83443d0b11a01dbfef",
+        "size_in_bytes": 151
+      },
+      {
+        "_path": "bin/pythonw",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "3c7c258ec374e2c0cdd341b141ab5b1b0ef6cfcab5f0549c883bc49bdb1e6ec3",
+        "sha256_in_prefix": "0a39ed21b48ab9f9d47ee5ccf899c44af1320dde70f25a83443d0b11a01dbfef",
+        "size_in_bytes": 151
+      },
+      {
+        "_path": "python.app/Contents/Info.plist",
+        "path_type": "hardlink",
+        "sha256": "e9a570a69915ed1ae80bb827506ccab7934219da9875496e71c6c2b69e0bb466",
+        "sha256_in_prefix": "e9a570a69915ed1ae80bb827506ccab7934219da9875496e71c6c2b69e0bb466",
+        "size_in_bytes": 678
+      },
+      {
+        "_path": "python.app/Contents/MacOS/python",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/concourse/worker/volumes/live/1b06b262-1fa7-45ee-4f05-3218019e6c51/volume/python.app_1538032527863/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "14937bf15a972244e4c6b9859955ecb4edededf9547e42d1f7f405e87e4fc7ce",
+        "sha256_in_prefix": "e9764965f97c7f5ecb6ef9036a5f1b3065f7edd1b02626ec810b891f4ee8e00a",
+        "size_in_bytes": 3708996
+      },
+      {
+        "_path": "python.app/Contents/PkgInfo",
+        "path_type": "hardlink",
+        "sha256": "7e50a30efad50208a173203ced60818d693bb61266b75aa10927d1a2adce80cb",
+        "sha256_in_prefix": "7e50a30efad50208a173203ced60818d693bb61266b75aa10927d1a2adce80cb",
+        "size_in_bytes": 9
+      },
+      {
+        "_path": "python.app/Contents/Resources/empty.lproj",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "python.app/Contents/Resources/qt_menu.nib/classes.nib",
+        "path_type": "hardlink",
+        "sha256": "6325392a064a875eaafd12468929b49c1c666a318d2d424e360c47100a553184",
+        "sha256_in_prefix": "6325392a064a875eaafd12468929b49c1c666a318d2d424e360c47100a553184",
+        "size_in_bytes": 1451
+      },
+      {
+        "_path": "python.app/Contents/Resources/qt_menu.nib/info.nib",
+        "path_type": "hardlink",
+        "sha256": "485ca0b6f016d9cb124a2062ca8cf48c11bba5771f09f2d953de7762215a7ad8",
+        "sha256_in_prefix": "485ca0b6f016d9cb124a2062ca8cf48c11bba5771f09f2d953de7762215a7ad8",
+        "size_in_bytes": 472
+      },
+      {
+        "_path": "python.app/Contents/Resources/qt_menu.nib/keyedobjects.nib",
+        "path_type": "hardlink",
+        "sha256": "d20f36026f673d87732583c7eb477ccae31c7ed453bd64c771c553e0993a2f8b",
+        "sha256_in_prefix": "d20f36026f673d87732583c7eb477ccae31c7ed453bd64c771c553e0993a2f8b",
+        "size_in_bytes": 5560
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "python.app==2=py37_9",
+  "sha256": "c1450db747f26f8370bb70e3639ee00bb9b1011d3f66ac53e71014046d4a69fe",
+  "size": 1277311,
+  "subdir": "osx-64",
+  "timestamp": 1538032544653,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/python.app-2-py37_9.conda",
+  "version": "2"
+}

@@ -1,0 +1,3 @@
+#!/Users/alexjorguer/Documents/GITHUB/K-SSHIBA/ksshiba/bin/python
+from numba.pycc import main
+main()

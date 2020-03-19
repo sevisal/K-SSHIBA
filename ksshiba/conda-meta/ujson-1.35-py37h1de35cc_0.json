@@ -1,0 +1,79 @@
+{
+  "build": "py37h1de35cc_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.7,<3.8.0a0"
+  ],
+  "extracted_package_dir": "/Users/alexjorguer/anaconda3/pkgs/ujson-1.35-py37h1de35cc_0",
+  "features": "",
+  "files": [
+    "lib/python3.7/site-packages/ujson-1.35-py3.7.egg-info/PKG-INFO",
+    "lib/python3.7/site-packages/ujson-1.35-py3.7.egg-info/SOURCES.txt",
+    "lib/python3.7/site-packages/ujson-1.35-py3.7.egg-info/dependency_links.txt",
+    "lib/python3.7/site-packages/ujson-1.35-py3.7.egg-info/top_level.txt",
+    "lib/python3.7/site-packages/ujson.cpython-37m-darwin.so"
+  ],
+  "fn": "ujson-1.35-py37h1de35cc_0.conda",
+  "legacy_bz2_md5": "60dd7e6df4ec03074f87fb3254343983",
+  "legacy_bz2_size": 25461,
+  "license": "BSD 3-Clause",
+  "link": {
+    "source": "/Users/alexjorguer/anaconda3/pkgs/ujson-1.35-py37h1de35cc_0",
+    "type": 1
+  },
+  "md5": "8e327bd4d65c737c5c8da500e0f15f0a",
+  "name": "ujson",
+  "package_tarball_full_path": "/Users/alexjorguer/anaconda3/pkgs/ujson-1.35-py37h1de35cc_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.7/site-packages/ujson-1.35-py3.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "0ae6b8542b46da53c456abfd8722544db563745096249e9c9cde8864cf6d39d5",
+        "sha256_in_prefix": "0ae6b8542b46da53c456abfd8722544db563745096249e9c9cde8864cf6d39d5",
+        "size_in_bytes": 20737
+      },
+      {
+        "_path": "lib/python3.7/site-packages/ujson-1.35-py3.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "95b36df59834edb572dfc66b45211b88b5de5ad6e24363d206e4cfdb784b60cb",
+        "sha256_in_prefix": "95b36df59834edb572dfc66b45211b88b5de5ad6e24363d206e4cfdb784b60cb",
+        "size_in_bytes": 435
+      },
+      {
+        "_path": "lib/python3.7/site-packages/ujson-1.35-py3.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python3.7/site-packages/ujson-1.35-py3.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "201318b952021d68bdc6798c376d9434c10561fd784dc702ee8f6e60f872720d",
+        "sha256_in_prefix": "201318b952021d68bdc6798c376d9434c10561fd784dc702ee8f6e60f872720d",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python3.7/site-packages/ujson.cpython-37m-darwin.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/ujson_1530918900669/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+        "sha256": "b2715a1c50f3fb028e00e021d16af310a0ef7406fe980f32e250713f73f6bada",
+        "sha256_in_prefix": "3eba16d036d40579141fd219f0af98e0579356d238193031b2783683936855c7",
+        "size_in_bytes": 46684
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "ujson==1.35=py37h1de35cc_0",
+  "sha256": "f48d00b95c7e4abecee55ddde39b0cc426a5cc873291e2a8a581d2b3e9893d26",
+  "size": 23657,
+  "subdir": "osx-64",
+  "timestamp": 1530919014220,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/ujson-1.35-py37h1de35cc_0.conda",
+  "version": "1.35"
+}

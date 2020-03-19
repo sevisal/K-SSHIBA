@@ -1,0 +1,94 @@
+{
+  "build": "py37_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.7,<3.8.0a0"
+  ],
+  "extracted_package_dir": "/Users/alexjorguer/anaconda3/pkgs/atomicwrites-1.3.0-py37_1",
+  "features": "",
+  "files": [
+    "lib/python3.7/site-packages/atomicwrites-1.3.0-py3.7.egg-info/PKG-INFO",
+    "lib/python3.7/site-packages/atomicwrites-1.3.0-py3.7.egg-info/SOURCES.txt",
+    "lib/python3.7/site-packages/atomicwrites-1.3.0-py3.7.egg-info/dependency_links.txt",
+    "lib/python3.7/site-packages/atomicwrites-1.3.0-py3.7.egg-info/installed-files.txt",
+    "lib/python3.7/site-packages/atomicwrites-1.3.0-py3.7.egg-info/top_level.txt",
+    "lib/python3.7/site-packages/atomicwrites/__init__.py",
+    "lib/python3.7/site-packages/atomicwrites/__pycache__/__init__.cpython-37.pyc"
+  ],
+  "fn": "atomicwrites-1.3.0-py37_1.conda",
+  "legacy_bz2_md5": "ee0d8cc8eda8f05a1078384f80878f52",
+  "legacy_bz2_size": 12878,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/Users/alexjorguer/anaconda3/pkgs/atomicwrites-1.3.0-py37_1",
+    "type": 1
+  },
+  "md5": "b50006036526be51fd78b7eb4d3419d8",
+  "name": "atomicwrites",
+  "package_tarball_full_path": "/Users/alexjorguer/anaconda3/pkgs/atomicwrites-1.3.0-py37_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.7/site-packages/atomicwrites-1.3.0-py3.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "a3cb4097b804df97fef72f9c535f28f0e8983fcd99e0707239f61f8a7ab4e7df",
+        "sha256_in_prefix": "a3cb4097b804df97fef72f9c535f28f0e8983fcd99e0707239f61f8a7ab4e7df",
+        "size_in_bytes": 6530
+      },
+      {
+        "_path": "lib/python3.7/site-packages/atomicwrites-1.3.0-py3.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "e70a4e66729a5606151fc6caae62989b22701c836a9fbf1f9176763041c16959",
+        "sha256_in_prefix": "e70a4e66729a5606151fc6caae62989b22701c836a9fbf1f9176763041c16959",
+        "size_in_bytes": 301
+      },
+      {
+        "_path": "lib/python3.7/site-packages/atomicwrites-1.3.0-py3.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python3.7/site-packages/atomicwrites-1.3.0-py3.7.egg-info/installed-files.txt",
+        "path_type": "hardlink",
+        "sha256": "958e06a518dd6b6911e2341287be5f2425d8f658ec472bf1b75cf282f90b8f45",
+        "sha256_in_prefix": "958e06a518dd6b6911e2341287be5f2425d8f658ec472bf1b75cf282f90b8f45",
+        "size_in_bytes": 136
+      },
+      {
+        "_path": "lib/python3.7/site-packages/atomicwrites-1.3.0-py3.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "92ceb8cca55492b97666bacfd38e82b32b5795219ff202c6f887285e93727a87",
+        "sha256_in_prefix": "92ceb8cca55492b97666bacfd38e82b32b5795219ff202c6f887285e93727a87",
+        "size_in_bytes": 13
+      },
+      {
+        "_path": "lib/python3.7/site-packages/atomicwrites/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d340daa5d41bd38fa4efd2998f3cdfc2723543c9dfb221794cf79572a6c6570d",
+        "sha256_in_prefix": "d340daa5d41bd38fa4efd2998f3cdfc2723543c9dfb221794cf79572a6c6570d",
+        "size_in_bytes": 6562
+      },
+      {
+        "_path": "lib/python3.7/site-packages/atomicwrites/__pycache__/__init__.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "06fb5a4e41a5406fdf85b16a4e02ad9168f4c8d0eebb712e5a86e869a7da7fcf",
+        "sha256_in_prefix": "06fb5a4e41a5406fdf85b16a4e02ad9168f4c8d0eebb712e5a86e869a7da7fcf",
+        "size_in_bytes": 6321
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "atomicwrites==1.3.0=py37_1",
+  "sha256": "e1722c5ae6abf319b246ef0975ca3aa9108b88af5908240a327996e9ab8be903",
+  "size": 13165,
+  "subdir": "osx-64",
+  "timestamp": 1553289704311,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/atomicwrites-1.3.0-py37_1.conda",
+  "version": "1.3.0"
+}

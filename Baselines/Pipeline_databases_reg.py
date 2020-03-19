@@ -41,6 +41,18 @@ def rbf_kernel_sig(X1, X2, sig=0):
         sig = np.sqrt(0.5*np.mean(aux[np.where(aux>0)]))             
     K = np.exp(-dist/sig**2);
     return K, sig
+
+def center_K(K):
+    """Center a kernel matrix K, i.e., removes the data mean in the feature space
+    Args:
+        K: kernel matrix"""
+    size_1,size_2 = K.shape;
+    D1 = K.sum(axis=0)/size_1
+    D2 = K.sum(axis=1)/size_2
+    E = D2.sum(axis=0)/size_1
+    K_n = K + np.tile(E,[size_1,size_2]) - np.tile(D1,[size_1,1]) - np.tile(D2,[size_2,1]).T
+    return K_n
+
     
 
 my_dict = {}
@@ -123,7 +135,7 @@ def Baselines_func(folds, base, database):
     verboseprint = print if verbose else lambda *a, **k: None
     
     # bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR', '_KRR', '_SVRrbf', '_NN'] # Name of the baseline
-    bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR','_LR', '_KRR']
+    bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR']
     for base in bases:
         # We separate the baseline into the different options available
         pipeline = base.split('_')
@@ -176,6 +188,10 @@ def Baselines_func(folds, base, database):
                 # Generating RBF kernel and calculating the gamma value.
                 K_tr, sig = rbf_kernel_sig(X_tr, X_tr)
                 K_tst, sig = rbf_kernel_sig(X_tst, X_tr, sig = sig)
+                
+                # Center the kernel.
+                K_tr = center_K(K_tr)
+                K_tst = center_K(K_tst)
                 
                 ##############################################
                 # Defining the feature extracting algorithm. #

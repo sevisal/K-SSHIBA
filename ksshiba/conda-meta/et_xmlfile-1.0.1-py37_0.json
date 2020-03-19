@@ -1,0 +1,166 @@
+{
+  "build": "py37_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.7,<3.8.0a0"
+  ],
+  "extracted_package_dir": "/Users/alexjorguer/anaconda3/pkgs/et_xmlfile-1.0.1-py37_0",
+  "features": "",
+  "files": [
+    "lib/python3.7/site-packages/et_xmlfile-1.0.1-py3.7.egg-info/PKG-INFO",
+    "lib/python3.7/site-packages/et_xmlfile-1.0.1-py3.7.egg-info/SOURCES.txt",
+    "lib/python3.7/site-packages/et_xmlfile-1.0.1-py3.7.egg-info/dependency_links.txt",
+    "lib/python3.7/site-packages/et_xmlfile-1.0.1-py3.7.egg-info/top_level.txt",
+    "lib/python3.7/site-packages/et_xmlfile/__init__.py",
+    "lib/python3.7/site-packages/et_xmlfile/__pycache__/__init__.cpython-37.pyc",
+    "lib/python3.7/site-packages/et_xmlfile/__pycache__/xmlfile.cpython-37.pyc",
+    "lib/python3.7/site-packages/et_xmlfile/tests/__init__.py",
+    "lib/python3.7/site-packages/et_xmlfile/tests/__pycache__/__init__.cpython-37.pyc",
+    "lib/python3.7/site-packages/et_xmlfile/tests/__pycache__/common_imports.cpython-37.pyc",
+    "lib/python3.7/site-packages/et_xmlfile/tests/__pycache__/helper.cpython-37.pyc",
+    "lib/python3.7/site-packages/et_xmlfile/tests/__pycache__/test_incremental_xmlfile.cpython-37.pyc",
+    "lib/python3.7/site-packages/et_xmlfile/tests/common_imports.py",
+    "lib/python3.7/site-packages/et_xmlfile/tests/helper.py",
+    "lib/python3.7/site-packages/et_xmlfile/tests/test_incremental_xmlfile.py",
+    "lib/python3.7/site-packages/et_xmlfile/xmlfile.py"
+  ],
+  "fn": "et_xmlfile-1.0.1-py37_0.conda",
+  "legacy_bz2_md5": "615b129da03b8e9a78285763c85eeb32",
+  "legacy_bz2_size": 21142,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/Users/alexjorguer/anaconda3/pkgs/et_xmlfile-1.0.1-py37_0",
+    "type": 1
+  },
+  "md5": "f68c5bc21a56773287e11b4c727d6dea",
+  "name": "et_xmlfile",
+  "package_tarball_full_path": "/Users/alexjorguer/anaconda3/pkgs/et_xmlfile-1.0.1-py37_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.7/site-packages/et_xmlfile-1.0.1-py3.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "b5861450d7ddc696fe10b355e3f2ac2104c471cd4c95cbe8470a77fdf282afb1",
+        "sha256_in_prefix": "b5861450d7ddc696fe10b355e3f2ac2104c471cd4c95cbe8470a77fdf282afb1",
+        "size_in_bytes": 1898
+      },
+      {
+        "_path": "lib/python3.7/site-packages/et_xmlfile-1.0.1-py3.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "308875fca2d09224ad5326e5d74b48987bb52835e9cbe57c4e62924f5f49935c",
+        "sha256_in_prefix": "308875fca2d09224ad5326e5d74b48987bb52835e9cbe57c4e62924f5f49935c",
+        "size_in_bytes": 358
+      },
+      {
+        "_path": "lib/python3.7/site-packages/et_xmlfile-1.0.1-py3.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python3.7/site-packages/et_xmlfile-1.0.1-py3.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "df8fbbe1de4d3404604ec3f108cb5ae68dbc5e904d992374882661b66c76164f",
+        "sha256_in_prefix": "df8fbbe1de4d3404604ec3f108cb5ae68dbc5e904d992374882661b66c76164f",
+        "size_in_bytes": 11
+      },
+      {
+        "_path": "lib/python3.7/site-packages/et_xmlfile/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ebeb185c89ef9da53c32472d0b088373f79493f8b2742f8c8d07b8f5d810d288",
+        "sha256_in_prefix": "ebeb185c89ef9da53c32472d0b088373f79493f8b2742f8c8d07b8f5d810d288",
+        "size_in_bytes": 266
+      },
+      {
+        "_path": "lib/python3.7/site-packages/et_xmlfile/__pycache__/__init__.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "805e3cb3bbf69eb0ed85ae3387faf79f0f07a9cc5eafd4f410e9c9f17b94c44d",
+        "sha256_in_prefix": "805e3cb3bbf69eb0ed85ae3387faf79f0f07a9cc5eafd4f410e9c9f17b94c44d",
+        "size_in_bytes": 424
+      },
+      {
+        "_path": "lib/python3.7/site-packages/et_xmlfile/__pycache__/xmlfile.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "27c34dbea77d5abbab49a6391d31785c5d450ace361ca7ce923f1717d5cce3a6",
+        "sha256_in_prefix": "27c34dbea77d5abbab49a6391d31785c5d450ace361ca7ce923f1717d5cce3a6",
+        "size_in_bytes": 3162
+      },
+      {
+        "_path": "lib/python3.7/site-packages/et_xmlfile/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.7/site-packages/et_xmlfile/tests/__pycache__/__init__.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "c5a07783b01894c5bcc96019db3db96d21d3bb6fc6a871b915373558a5b4aa06",
+        "sha256_in_prefix": "c5a07783b01894c5bcc96019db3db96d21d3bb6fc6a871b915373558a5b4aa06",
+        "size_in_bytes": 143
+      },
+      {
+        "_path": "lib/python3.7/site-packages/et_xmlfile/tests/__pycache__/common_imports.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "1c3c5ff76cd59065ac937c71bae61e867f7b187d0f96ccda9c91dc58e84fde05",
+        "sha256_in_prefix": "1c3c5ff76cd59065ac937c71bae61e867f7b187d0f96ccda9c91dc58e84fde05",
+        "size_in_bytes": 9705
+      },
+      {
+        "_path": "lib/python3.7/site-packages/et_xmlfile/tests/__pycache__/helper.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "154e789158b98d6da78dfcf4d6a0bf901c95b3e87e6ecb52efa301ce7dc3e83f",
+        "sha256_in_prefix": "154e789158b98d6da78dfcf4d6a0bf901c95b3e87e6ecb52efa301ce7dc3e83f",
+        "size_in_bytes": 818
+      },
+      {
+        "_path": "lib/python3.7/site-packages/et_xmlfile/tests/__pycache__/test_incremental_xmlfile.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "b4e689fac138a376159e59242610dcd9dc8560e06e51f4b50acf0f605adb8529",
+        "sha256_in_prefix": "b4e689fac138a376159e59242610dcd9dc8560e06e51f4b50acf0f605adb8529",
+        "size_in_bytes": 14114
+      },
+      {
+        "_path": "lib/python3.7/site-packages/et_xmlfile/tests/common_imports.py",
+        "path_type": "hardlink",
+        "sha256": "d6797c29195ce9a98d5e6c840d108ec04df5384bfc351180b77083d4424a86b7",
+        "sha256_in_prefix": "d6797c29195ce9a98d5e6c840d108ec04df5384bfc351180b77083d4424a86b7",
+        "size_in_bytes": 8732
+      },
+      {
+        "_path": "lib/python3.7/site-packages/et_xmlfile/tests/helper.py",
+        "path_type": "hardlink",
+        "sha256": "c65c71fa57241bb8dbd6e93d6009ef1b2f77313ca463e8a98a9d041b26da2245",
+        "sha256_in_prefix": "c65c71fa57241bb8dbd6e93d6009ef1b2f77313ca463e8a98a9d041b26da2245",
+        "size_in_bytes": 605
+      },
+      {
+        "_path": "lib/python3.7/site-packages/et_xmlfile/tests/test_incremental_xmlfile.py",
+        "path_type": "hardlink",
+        "sha256": "e6a2f6c62d28902d6fe3d3e939639c1979d4c4f83d019fea2e7a52fc2a337b8d",
+        "sha256_in_prefix": "e6a2f6c62d28902d6fe3d3e939639c1979d4c4f83d019fea2e7a52fc2a337b8d",
+        "size_in_bytes": 11376
+      },
+      {
+        "_path": "lib/python3.7/site-packages/et_xmlfile/xmlfile.py",
+        "path_type": "hardlink",
+        "sha256": "fe1db44516f7a6d0d9eb15e8c4c53f5abc7cac6e9466c8344d2ec710eae8b738",
+        "sha256_in_prefix": "fe1db44516f7a6d0d9eb15e8c4c53f5abc7cac6e9466c8344d2ec710eae8b738",
+        "size_in_bytes": 3204
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "et_xmlfile==1.0.1=py37_0",
+  "sha256": "d9b4c13c9e26ac770724bd4d0f0e0b62e06dee0c0d735e76407a7d31b0dff59f",
+  "size": 21433,
+  "subdir": "osx-64",
+  "timestamp": 1530726649359,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/et_xmlfile-1.0.1-py37_0.conda",
+  "version": "1.0.1"
+}

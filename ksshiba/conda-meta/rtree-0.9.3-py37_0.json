@@ -1,0 +1,134 @@
+{
+  "build": "py37_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "libspatialindex >=1.9.3,<1.9.4.0a0",
+    "python >=3.7,<3.8.0a0"
+  ],
+  "extracted_package_dir": "/Users/alexjorguer/anaconda3/pkgs/rtree-0.9.3-py37_0",
+  "features": "",
+  "files": [
+    "lib/python3.7/site-packages/Rtree-0.9.3.dist-info/INSTALLER",
+    "lib/python3.7/site-packages/Rtree-0.9.3.dist-info/LICENSE.txt",
+    "lib/python3.7/site-packages/Rtree-0.9.3.dist-info/METADATA",
+    "lib/python3.7/site-packages/Rtree-0.9.3.dist-info/RECORD",
+    "lib/python3.7/site-packages/Rtree-0.9.3.dist-info/WHEEL",
+    "lib/python3.7/site-packages/Rtree-0.9.3.dist-info/top_level.txt",
+    "lib/python3.7/site-packages/rtree/__init__.py",
+    "lib/python3.7/site-packages/rtree/__pycache__/__init__.cpython-37.pyc",
+    "lib/python3.7/site-packages/rtree/__pycache__/core.cpython-37.pyc",
+    "lib/python3.7/site-packages/rtree/__pycache__/index.cpython-37.pyc",
+    "lib/python3.7/site-packages/rtree/core.py",
+    "lib/python3.7/site-packages/rtree/index.py"
+  ],
+  "fn": "rtree-0.9.3-py37_0.conda",
+  "legacy_bz2_md5": "dc87b42ae43c9e62e7bd3c263d0f0b1f",
+  "legacy_bz2_size": 47483,
+  "license": "MIT",
+  "link": {
+    "source": "/Users/alexjorguer/anaconda3/pkgs/rtree-0.9.3-py37_0",
+    "type": 1
+  },
+  "md5": "4282b060687dd53d37b98414bf3e00fd",
+  "name": "rtree",
+  "package_tarball_full_path": "/Users/alexjorguer/anaconda3/pkgs/rtree-0.9.3-py37_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.7/site-packages/Rtree-0.9.3.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.7/site-packages/Rtree-0.9.3.dist-info/LICENSE.txt",
+        "path_type": "hardlink",
+        "sha256": "0aee23abca969aab648c0c41aa9f6cc861887167ac9f3fbf8d446dda01c9b81b",
+        "sha256_in_prefix": "0aee23abca969aab648c0c41aa9f6cc861887167ac9f3fbf8d446dda01c9b81b",
+        "size_in_bytes": 1116
+      },
+      {
+        "_path": "lib/python3.7/site-packages/Rtree-0.9.3.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "79c4984ac764fd54267de9719e0bb1400aef01db2c0a98dfbfaa033b08fd7819",
+        "sha256_in_prefix": "79c4984ac764fd54267de9719e0bb1400aef01db2c0a98dfbfaa033b08fd7819",
+        "size_in_bytes": 2495
+      },
+      {
+        "_path": "lib/python3.7/site-packages/Rtree-0.9.3.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "957a16428199e846753564fb073e0d6fc57a2c84c29f1d12abb564d404aac167",
+        "sha256_in_prefix": "957a16428199e846753564fb073e0d6fc57a2c84c29f1d12abb564d404aac167",
+        "size_in_bytes": 816
+      },
+      {
+        "_path": "lib/python3.7/site-packages/Rtree-0.9.3.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "a78ebfe54873ab3e80cde4a8b223a7c4afb39858dad62db60ab4028e661ef1e7",
+        "sha256_in_prefix": "a78ebfe54873ab3e80cde4a8b223a7c4afb39858dad62db60ab4028e661ef1e7",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "lib/python3.7/site-packages/Rtree-0.9.3.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "4f5f67b4b01e841ded6794bdaab2e07e217593d37580fe7a3ffd7e4ec05aef6e",
+        "sha256_in_prefix": "4f5f67b4b01e841ded6794bdaab2e07e217593d37580fe7a3ffd7e4ec05aef6e",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python3.7/site-packages/rtree/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "0f612529d29a1e36db6cc84e7486193863ed92cba172668994dcc5c47218d070",
+        "sha256_in_prefix": "0f612529d29a1e36db6cc84e7486193863ed92cba172668994dcc5c47218d070",
+        "size_in_bytes": 70
+      },
+      {
+        "_path": "lib/python3.7/site-packages/rtree/__pycache__/__init__.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "96def740917d7a7be3b78fb5120feae02798a776e9a891c3c28807a2a61c1b12",
+        "sha256_in_prefix": "96def740917d7a7be3b78fb5120feae02798a776e9a891c3c28807a2a61c1b12",
+        "size_in_bytes": 224
+      },
+      {
+        "_path": "lib/python3.7/site-packages/rtree/__pycache__/core.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "b8135dd56d266b5e9386cfbd68aed6225c3c2071e9c5f571dba62a83b94e1d5b",
+        "sha256_in_prefix": "b8135dd56d266b5e9386cfbd68aed6225c3c2071e9c5f571dba62a83b94e1d5b",
+        "size_in_bytes": 11629
+      },
+      {
+        "_path": "lib/python3.7/site-packages/rtree/__pycache__/index.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "7cd376d81400c401caf70464be9ab4579497ee4d52258c74fbfc726be1655a9b",
+        "sha256_in_prefix": "7cd376d81400c401caf70464be9ab4579497ee4d52258c74fbfc726be1655a9b",
+        "size_in_bytes": 72697
+      },
+      {
+        "_path": "lib/python3.7/site-packages/rtree/core.py",
+        "path_type": "hardlink",
+        "sha256": "7a580f0ee824b99d56bd87955c8fed4c747e4c4525c6d7d0b57ba5e6135c04c1",
+        "sha256_in_prefix": "7a580f0ee824b99d56bd87955c8fed4c747e4c4525c6d7d0b57ba5e6135c04c1",
+        "size_in_bytes": 29757
+      },
+      {
+        "_path": "lib/python3.7/site-packages/rtree/index.py",
+        "path_type": "hardlink",
+        "sha256": "681d52f7e064c7cd606d677d24aa7bdd923e3cd16e30459364a67961a22d0658",
+        "sha256_in_prefix": "681d52f7e064c7cd606d677d24aa7bdd923e3cd16e30459364a67961a22d0658",
+        "size_in_bytes": 80504
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "rtree==0.9.3=py37_0",
+  "sha256": "31792c136072851659c6b9510ddd5988142cda2fff268fac4383ba2f8403dcd5",
+  "size": 45405,
+  "subdir": "osx-64",
+  "timestamp": 1580336058243,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/rtree-0.9.3-py37_0.conda",
+  "version": "0.9.3"
+}

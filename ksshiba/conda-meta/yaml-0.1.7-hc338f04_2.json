@@ -1,0 +1,86 @@
+{
+  "build": "hc338f04_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/Users/alexjorguer/anaconda3/pkgs/yaml-0.1.7-hc338f04_2",
+  "features": "",
+  "files": [
+    "include/yaml.h",
+    "lib/libyaml-0.2.dylib",
+    "lib/libyaml.a",
+    "lib/libyaml.dylib",
+    "lib/libyaml.la",
+    "lib/pkgconfig/yaml-0.1.pc"
+  ],
+  "fn": "yaml-0.1.7-hc338f04_2.conda",
+  "legacy_bz2_md5": "dab654341f57e56b615a678800262b0e",
+  "legacy_bz2_size": 82035,
+  "license": "MIT",
+  "link": {
+    "source": "/Users/alexjorguer/anaconda3/pkgs/yaml-0.1.7-hc338f04_2",
+    "type": 1
+  },
+  "md5": "b81de17ef79a83c497d0128e37461ae2",
+  "name": "yaml",
+  "package_tarball_full_path": "/Users/alexjorguer/anaconda3/pkgs/yaml-0.1.7-hc338f04_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/yaml.h",
+        "path_type": "hardlink",
+        "sha256": "5a16306d95841c740f30b118cf528289f2745390008b992d72caa9a0f08b0fe9",
+        "sha256_in_prefix": "5a16306d95841c740f30b118cf528289f2745390008b992d72caa9a0f08b0fe9",
+        "size_in_bytes": 54225
+      },
+      {
+        "_path": "lib/libyaml-0.2.dylib",
+        "path_type": "hardlink",
+        "sha256": "865611f3d3f2b39567c8d63029a16a664dbc912de0ecf1c569c9d3c3f2272abd",
+        "sha256_in_prefix": "865611f3d3f2b39567c8d63029a16a664dbc912de0ecf1c569c9d3c3f2272abd",
+        "size_in_bytes": 129940
+      },
+      {
+        "_path": "lib/libyaml.a",
+        "path_type": "hardlink",
+        "sha256": "656e3dfa5be1dfa94d5e22ad371a7956cd216c963ea598bcb60fdfdebe270407",
+        "sha256_in_prefix": "656e3dfa5be1dfa94d5e22ad371a7956cd216c963ea598bcb60fdfdebe270407",
+        "size_in_bytes": 151512
+      },
+      {
+        "_path": "lib/libyaml.dylib",
+        "path_type": "softlink",
+        "sha256": "865611f3d3f2b39567c8d63029a16a664dbc912de0ecf1c569c9d3c3f2272abd",
+        "size_in_bytes": 129940
+      },
+      {
+        "_path": "lib/libyaml.la",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "4ae4be06b8c06e353890f91a72aa9e6c14996b8b75cf4bb03d9088382c93d3a2",
+        "sha256_in_prefix": "765fc3e2dc423bcae98cefd17a925706f2adfa3a7e02713d1343b8bbf4df3fad",
+        "size_in_bytes": 960
+      },
+      {
+        "_path": "lib/pkgconfig/yaml-0.1.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "c3949fda489ec0b8056cd54a203e3355fa2dadd9c157c71ba9d24d4b509e8e52",
+        "sha256_in_prefix": "cfe38dc525ce1fcb6d75b0cb0e05b3e1c28d35e84f6fc22c3dc4031bad00a0fe",
+        "size_in_bytes": 224
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "yaml==0.1.7=hc338f04_2",
+  "sha256": "d1aaa7fba4215935537f19f217071bbb8ad75b7244220272ed59f159db0d972e",
+  "size": 68226,
+  "subdir": "osx-64",
+  "timestamp": 1510610700770,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/yaml-0.1.7-hc338f04_2.conda",
+  "version": "0.1.7"
+}

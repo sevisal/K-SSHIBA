@@ -1,0 +1,73 @@
+{
+  "build": "hdc02c5d_7",
+  "build_number": 7,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "libgfortran >=3.0.1,<4.0.0.a0"
+  ],
+  "extracted_package_dir": "/Users/alexjorguer/anaconda3/pkgs/libopenblas-0.2.20-hdc02c5d_7",
+  "features": "",
+  "files": [
+    "lib/libblas.dylib",
+    "lib/libcblas.dylib",
+    "lib/liblapack.dylib",
+    "lib/libopenblas.dylib",
+    "lib/libopenblasp-r0.2.20.dylib"
+  ],
+  "fn": "libopenblas-0.2.20-hdc02c5d_7.conda",
+  "legacy_bz2_md5": "cfef1f5f20fd746bbb77649728727f72",
+  "legacy_bz2_size": 10387038,
+  "license": "BSD",
+  "link": {
+    "source": "/Users/alexjorguer/anaconda3/pkgs/libopenblas-0.2.20-hdc02c5d_7",
+    "type": 1
+  },
+  "md5": "ee72efdad32cc72cdce9568291644107",
+  "name": "libopenblas",
+  "package_tarball_full_path": "/Users/alexjorguer/anaconda3/pkgs/libopenblas-0.2.20-hdc02c5d_7.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libblas.dylib",
+        "path_type": "softlink",
+        "sha256": "a97dd10042491fc22cddeeecd46547b3727bcb7eeb8b46c9ae0d1e6ea36e2925",
+        "size_in_bytes": 83052588
+      },
+      {
+        "_path": "lib/libcblas.dylib",
+        "path_type": "softlink",
+        "sha256": "a97dd10042491fc22cddeeecd46547b3727bcb7eeb8b46c9ae0d1e6ea36e2925",
+        "size_in_bytes": 83052588
+      },
+      {
+        "_path": "lib/liblapack.dylib",
+        "path_type": "softlink",
+        "sha256": "a97dd10042491fc22cddeeecd46547b3727bcb7eeb8b46c9ae0d1e6ea36e2925",
+        "size_in_bytes": 83052588
+      },
+      {
+        "_path": "lib/libopenblas.dylib",
+        "path_type": "softlink",
+        "sha256": "a97dd10042491fc22cddeeecd46547b3727bcb7eeb8b46c9ae0d1e6ea36e2925",
+        "size_in_bytes": 83052588
+      },
+      {
+        "_path": "lib/libopenblasp-r0.2.20.dylib",
+        "path_type": "hardlink",
+        "sha256": "a97dd10042491fc22cddeeecd46547b3727bcb7eeb8b46c9ae0d1e6ea36e2925",
+        "sha256_in_prefix": "a97dd10042491fc22cddeeecd46547b3727bcb7eeb8b46c9ae0d1e6ea36e2925",
+        "size_in_bytes": 83052588
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "libopenblas==0.2.20=hdc02c5d_7",
+  "sha256": "59b2dd985bbe2f156de977ea76c2a04d2b6887812e36dc36755a2553188f6731",
+  "size": 4388608,
+  "subdir": "osx-64",
+  "timestamp": 1527877571314,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/libopenblas-0.2.20-hdc02c5d_7.conda",
+  "version": "0.2.20"
+}

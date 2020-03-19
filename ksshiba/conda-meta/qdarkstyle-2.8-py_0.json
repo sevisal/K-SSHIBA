@@ -1,0 +1,205 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/Users/alexjorguer/anaconda3/pkgs/qdarkstyle-2.8-py_0",
+  "features": "",
+  "files": [
+    "bin/qdarkstyle",
+    "lib/python3.7/site-packages/QDarkStyle-2.8.dist-info/AUTHORS.rst",
+    "lib/python3.7/site-packages/QDarkStyle-2.8.dist-info/INSTALLER",
+    "lib/python3.7/site-packages/QDarkStyle-2.8.dist-info/LICENSE.rst",
+    "lib/python3.7/site-packages/QDarkStyle-2.8.dist-info/METADATA",
+    "lib/python3.7/site-packages/QDarkStyle-2.8.dist-info/RECORD",
+    "lib/python3.7/site-packages/QDarkStyle-2.8.dist-info/WHEEL",
+    "lib/python3.7/site-packages/QDarkStyle-2.8.dist-info/entry_points.txt",
+    "lib/python3.7/site-packages/QDarkStyle-2.8.dist-info/top_level.txt",
+    "lib/python3.7/site-packages/qdarkstyle/__init__.py",
+    "lib/python3.7/site-packages/qdarkstyle/__main__.py",
+    "lib/python3.7/site-packages/qdarkstyle/palette.py",
+    "lib/python3.7/site-packages/qdarkstyle/style_rc.py",
+    "lib/python3.7/site-packages/qdarkstyle/utils/__init__.py",
+    "lib/python3.7/site-packages/qdarkstyle/utils/images.py",
+    "lib/python3.7/site-packages/qdarkstyle/utils/scss.py",
+    "lib/python3.7/site-packages/qdarkstyle/__pycache__/__init__.cpython-37.pyc",
+    "lib/python3.7/site-packages/qdarkstyle/__pycache__/__main__.cpython-37.pyc",
+    "lib/python3.7/site-packages/qdarkstyle/__pycache__/palette.cpython-37.pyc",
+    "lib/python3.7/site-packages/qdarkstyle/__pycache__/style_rc.cpython-37.pyc",
+    "lib/python3.7/site-packages/qdarkstyle/utils/__pycache__/__init__.cpython-37.pyc",
+    "lib/python3.7/site-packages/qdarkstyle/utils/__pycache__/images.cpython-37.pyc",
+    "lib/python3.7/site-packages/qdarkstyle/utils/__pycache__/scss.cpython-37.pyc"
+  ],
+  "fn": "qdarkstyle-2.8-py_0.conda",
+  "legacy_bz2_md5": "690a749057d297700dbcc42704e43699",
+  "legacy_bz2_size": 159408,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/Users/alexjorguer/anaconda3/pkgs/qdarkstyle-2.8-py_0",
+    "type": 1
+  },
+  "md5": "82856573fdda43ba069703b9fad7de15",
+  "name": "qdarkstyle",
+  "noarch": "python",
+  "package_tarball_full_path": "/Users/alexjorguer/anaconda3/pkgs/qdarkstyle-2.8-py_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "python-scripts/qdarkstyle",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "18719be5bf3ec27550d18da74c3f93747cbd0d1eebf0d6a1d5d5f41ec33dcc14",
+        "sha256_in_prefix": "f9696514cd138394b4463988bce569f996542626bae455177e0d96a3dc1effdd",
+        "size_in_bytes": 278
+      },
+      {
+        "_path": "site-packages/QDarkStyle-2.8.dist-info/AUTHORS.rst",
+        "path_type": "hardlink",
+        "sha256": "44c12579b983e68ce4ddfe376c1c95b42e8cace7656951ff0fdfbf8068a5033f",
+        "sha256_in_prefix": "44c12579b983e68ce4ddfe376c1c95b42e8cace7656951ff0fdfbf8068a5033f",
+        "size_in_bytes": 1054
+      },
+      {
+        "_path": "site-packages/QDarkStyle-2.8.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/QDarkStyle-2.8.dist-info/LICENSE.rst",
+        "path_type": "hardlink",
+        "sha256": "8abb75a74659870347ceca80e8f551ae26be6d71b26634404f3e8082ca55bef1",
+        "sha256_in_prefix": "8abb75a74659870347ceca80e8f551ae26be6d71b26634404f3e8082ca55bef1",
+        "size_in_bytes": 19175
+      },
+      {
+        "_path": "site-packages/QDarkStyle-2.8.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "a0d96ab2dc5663ccae07e681219e77fd85d4ab2f282b179e179781cd8251dc4b",
+        "sha256_in_prefix": "a0d96ab2dc5663ccae07e681219e77fd85d4ab2f282b179e179781cd8251dc4b",
+        "size_in_bytes": 2653
+      },
+      {
+        "_path": "site-packages/QDarkStyle-2.8.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "576b0829b6e99dbc3dd0e85e36c206612ab342124a9fdbf3b9222a25be8ac262",
+        "sha256_in_prefix": "576b0829b6e99dbc3dd0e85e36c206612ab342124a9fdbf3b9222a25be8ac262",
+        "size_in_bytes": 1696
+      },
+      {
+        "_path": "site-packages/QDarkStyle-2.8.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "f3335865bc10497a01f487d73a33df78dc2f02c00b0237df824dbb16abc259ba",
+        "sha256_in_prefix": "f3335865bc10497a01f487d73a33df78dc2f02c00b0237df824dbb16abc259ba",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/QDarkStyle-2.8.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "eee802a2c59031d1f9c850da70c409e860758d1cc5ae425c76b78e3bf99a174c",
+        "sha256_in_prefix": "eee802a2c59031d1f9c850da70c409e860758d1cc5ae425c76b78e3bf99a174c",
+        "size_in_bytes": 57
+      },
+      {
+        "_path": "site-packages/QDarkStyle-2.8.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "a013ade85a57cdcfca56edb03619bf8651f68f3965db28ef577397fc0791f322",
+        "sha256_in_prefix": "a013ade85a57cdcfca56edb03619bf8651f68f3965db28ef577397fc0791f322",
+        "size_in_bytes": 11
+      },
+      {
+        "_path": "site-packages/qdarkstyle/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b65970a4130acdb5a991f7f6175c98b9d4905b3dd05e78958de3c9364ff037f0",
+        "sha256_in_prefix": "b65970a4130acdb5a991f7f6175c98b9d4905b3dd05e78958de3c9364ff037f0",
+        "size_in_bytes": 11191
+      },
+      {
+        "_path": "site-packages/qdarkstyle/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "a75ce45736bd42e03b5748e8939659f91e59436723d2183c4786688e7c397046",
+        "sha256_in_prefix": "a75ce45736bd42e03b5748e8939659f91e59436723d2183c4786688e7c397046",
+        "size_in_bytes": 2002
+      },
+      {
+        "_path": "site-packages/qdarkstyle/palette.py",
+        "path_type": "hardlink",
+        "sha256": "75272839ec447b5f34ea3795b8e56cdf9055940ca6c03dce8f4f1d7c6e4b40d7",
+        "sha256_in_prefix": "75272839ec447b5f34ea3795b8e56cdf9055940ca6c03dce8f4f1d7c6e4b40d7",
+        "size_in_bytes": 2409
+      },
+      {
+        "_path": "site-packages/qdarkstyle/style_rc.py",
+        "path_type": "hardlink",
+        "sha256": "963d1853509e54c71554332a97cbf60a514431649b5345d4f1b0086280832eac",
+        "sha256_in_prefix": "963d1853509e54c71554332a97cbf60a514431649b5345d4f1b0086280832eac",
+        "size_in_bytes": 671110
+      },
+      {
+        "_path": "site-packages/qdarkstyle/utils/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c8756e528b9e51514eb5555e67b8666baec2d0ba48aa6f4147923c2eddcc6ebf",
+        "sha256_in_prefix": "c8756e528b9e51514eb5555e67b8666baec2d0ba48aa6f4147923c2eddcc6ebf",
+        "size_in_bytes": 129
+      },
+      {
+        "_path": "site-packages/qdarkstyle/utils/images.py",
+        "path_type": "hardlink",
+        "sha256": "5fd881144d123905537dd00c015fb4fa5f4b267175eeb6d536de7bf071ccacf5",
+        "sha256_in_prefix": "5fd881144d123905537dd00c015fb4fa5f4b267175eeb6d536de7bf071ccacf5",
+        "size_in_bytes": 8672
+      },
+      {
+        "_path": "site-packages/qdarkstyle/utils/scss.py",
+        "path_type": "hardlink",
+        "sha256": "572bd3af07ef5cff345800bd125500246fe0b1c1d340c20162423c0cfa1bb28b",
+        "sha256_in_prefix": "572bd3af07ef5cff345800bd125500246fe0b1c1d340c20162423c0cfa1bb28b",
+        "size_in_bytes": 8162
+      },
+      {
+        "_path": "lib/python3.7/site-packages/qdarkstyle/__pycache__/__init__.cpython-37.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.7/site-packages/qdarkstyle/__pycache__/__main__.cpython-37.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.7/site-packages/qdarkstyle/__pycache__/palette.cpython-37.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.7/site-packages/qdarkstyle/__pycache__/style_rc.cpython-37.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.7/site-packages/qdarkstyle/utils/__pycache__/__init__.cpython-37.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.7/site-packages/qdarkstyle/utils/__pycache__/images.cpython-37.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.7/site-packages/qdarkstyle/utils/__pycache__/scss.cpython-37.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "qdarkstyle==2.8=py_0",
+  "sha256": "3fd35bf1bb8193584372f650417437247e74b804f54556cd79a6b3dbd78c1f20",
+  "size": 180193,
+  "subdir": "noarch",
+  "timestamp": 1580310475126,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/qdarkstyle-2.8-py_0.conda",
+  "version": "2.8"
+}

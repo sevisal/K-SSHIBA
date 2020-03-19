@@ -1,0 +1,102 @@
+{
+  "build": "py37_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.7,<3.8.0a0"
+  ],
+  "extracted_package_dir": "/Users/alexjorguer/anaconda3/pkgs/mccabe-0.6.1-py37_1",
+  "features": "",
+  "files": [
+    "lib/python3.7/site-packages/__pycache__/mccabe.cpython-37.pyc",
+    "lib/python3.7/site-packages/mccabe-0.6.1-py3.7.egg-info/PKG-INFO",
+    "lib/python3.7/site-packages/mccabe-0.6.1-py3.7.egg-info/SOURCES.txt",
+    "lib/python3.7/site-packages/mccabe-0.6.1-py3.7.egg-info/dependency_links.txt",
+    "lib/python3.7/site-packages/mccabe-0.6.1-py3.7.egg-info/entry_points.txt",
+    "lib/python3.7/site-packages/mccabe-0.6.1-py3.7.egg-info/not-zip-safe",
+    "lib/python3.7/site-packages/mccabe-0.6.1-py3.7.egg-info/top_level.txt",
+    "lib/python3.7/site-packages/mccabe.py"
+  ],
+  "fn": "mccabe-0.6.1-py37_1.conda",
+  "legacy_bz2_md5": "05f80748dba40f4f4abc3dd00ce88680",
+  "legacy_bz2_size": 14109,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/Users/alexjorguer/anaconda3/pkgs/mccabe-0.6.1-py37_1",
+    "type": 1
+  },
+  "md5": "242c7e282d6edea5a2862cef6ee9d2f7",
+  "name": "mccabe",
+  "package_tarball_full_path": "/Users/alexjorguer/anaconda3/pkgs/mccabe-0.6.1-py37_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.7/site-packages/__pycache__/mccabe.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "38c24f5bf20e686a6583127b96b19c865d6f9cfa4f6366100540fdb2c721d55c",
+        "sha256_in_prefix": "38c24f5bf20e686a6583127b96b19c865d6f9cfa4f6366100540fdb2c721d55c",
+        "size_in_bytes": 11099
+      },
+      {
+        "_path": "lib/python3.7/site-packages/mccabe-0.6.1-py3.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "04c49d978d2d11cca92bf11daad64b4eaba3af04073b7f99775a5a8dfd11473b",
+        "sha256_in_prefix": "04c49d978d2d11cca92bf11daad64b4eaba3af04073b7f99775a5a8dfd11473b",
+        "size_in_bytes": 5593
+      },
+      {
+        "_path": "lib/python3.7/site-packages/mccabe-0.6.1-py3.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "70d96e663316f14036e3494adb221c4e7ba0ef7bad4a2c93b241fe02f64471f0",
+        "sha256_in_prefix": "70d96e663316f14036e3494adb221c4e7ba0ef7bad4a2c93b241fe02f64471f0",
+        "size_in_bytes": 256
+      },
+      {
+        "_path": "lib/python3.7/site-packages/mccabe-0.6.1-py3.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python3.7/site-packages/mccabe-0.6.1-py3.7.egg-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "376347d7cd865d35324e6f2bf1732069d6fd0be0916b9754af593c382f75b861",
+        "sha256_in_prefix": "376347d7cd865d35324e6f2bf1732069d6fd0be0916b9754af593c382f75b861",
+        "size_in_bytes": 47
+      },
+      {
+        "_path": "lib/python3.7/site-packages/mccabe-0.6.1-py3.7.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python3.7/site-packages/mccabe-0.6.1-py3.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "db5717baa644fa5a5c7c0aaa00dbd7f448c8d440f5a7ccdc562bf4eb8bb744a0",
+        "sha256_in_prefix": "db5717baa644fa5a5c7c0aaa00dbd7f448c8d440f5a7ccdc562bf4eb8bb744a0",
+        "size_in_bytes": 7
+      },
+      {
+        "_path": "lib/python3.7/site-packages/mccabe.py",
+        "path_type": "hardlink",
+        "sha256": "5cf332c1d42c846ff99d28dc91bf8eccdaa7090b9742fcb71530a5b292b01900",
+        "sha256_in_prefix": "5cf332c1d42c846ff99d28dc91bf8eccdaa7090b9742fcb71530a5b292b01900",
+        "size_in_bytes": 10693
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "mccabe==0.6.1=py37_1",
+  "sha256": "fa0c8f73619334b2f3544b36b6962412a1f9c5a572eb50f1bd7eb9f561356f6f",
+  "size": 14638,
+  "subdir": "osx-64",
+  "timestamp": 1530795047771,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/mccabe-0.6.1-py37_1.conda",
+  "version": "0.6.1"
+}

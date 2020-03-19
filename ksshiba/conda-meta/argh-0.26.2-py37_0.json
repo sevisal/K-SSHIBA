@@ -1,0 +1,261 @@
+{
+  "build": "py37_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.7,<3.8.0a0"
+  ],
+  "extracted_package_dir": "/Users/alexjorguer/anaconda3/pkgs/argh-0.26.2-py37_0",
+  "features": "",
+  "files": [
+    "lib/python3.7/site-packages/argh-0.26.2-py3.7.egg-info/PKG-INFO",
+    "lib/python3.7/site-packages/argh-0.26.2-py3.7.egg-info/SOURCES.txt",
+    "lib/python3.7/site-packages/argh-0.26.2-py3.7.egg-info/dependency_links.txt",
+    "lib/python3.7/site-packages/argh-0.26.2-py3.7.egg-info/top_level.txt",
+    "lib/python3.7/site-packages/argh/__init__.py",
+    "lib/python3.7/site-packages/argh/__pycache__/__init__.cpython-37.pyc",
+    "lib/python3.7/site-packages/argh/__pycache__/assembling.cpython-37.pyc",
+    "lib/python3.7/site-packages/argh/__pycache__/compat.cpython-37.pyc",
+    "lib/python3.7/site-packages/argh/__pycache__/completion.cpython-37.pyc",
+    "lib/python3.7/site-packages/argh/__pycache__/constants.cpython-37.pyc",
+    "lib/python3.7/site-packages/argh/__pycache__/decorators.cpython-37.pyc",
+    "lib/python3.7/site-packages/argh/__pycache__/dispatching.cpython-37.pyc",
+    "lib/python3.7/site-packages/argh/__pycache__/exceptions.cpython-37.pyc",
+    "lib/python3.7/site-packages/argh/__pycache__/helpers.cpython-37.pyc",
+    "lib/python3.7/site-packages/argh/__pycache__/interaction.cpython-37.pyc",
+    "lib/python3.7/site-packages/argh/__pycache__/io.cpython-37.pyc",
+    "lib/python3.7/site-packages/argh/__pycache__/utils.cpython-37.pyc",
+    "lib/python3.7/site-packages/argh/assembling.py",
+    "lib/python3.7/site-packages/argh/compat.py",
+    "lib/python3.7/site-packages/argh/completion.py",
+    "lib/python3.7/site-packages/argh/constants.py",
+    "lib/python3.7/site-packages/argh/decorators.py",
+    "lib/python3.7/site-packages/argh/dispatching.py",
+    "lib/python3.7/site-packages/argh/exceptions.py",
+    "lib/python3.7/site-packages/argh/helpers.py",
+    "lib/python3.7/site-packages/argh/interaction.py",
+    "lib/python3.7/site-packages/argh/io.py",
+    "lib/python3.7/site-packages/argh/utils.py"
+  ],
+  "fn": "argh-0.26.2-py37_0.conda",
+  "legacy_bz2_md5": "bfe056086e54d30484027bb5d8c90934",
+  "legacy_bz2_size": 36730,
+  "license": "LGPL 3",
+  "link": {
+    "source": "/Users/alexjorguer/anaconda3/pkgs/argh-0.26.2-py37_0",
+    "type": 1
+  },
+  "md5": "bfcd32c742fbc9db114700e7d9bf769e",
+  "name": "argh",
+  "package_tarball_full_path": "/Users/alexjorguer/anaconda3/pkgs/argh-0.26.2-py37_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.7/site-packages/argh-0.26.2-py3.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "4d0be9174074fb3a354a56deb138b8df6e887723a32f3d8493afab9ee78b9d10",
+        "sha256_in_prefix": "4d0be9174074fb3a354a56deb138b8df6e887723a32f3d8493afab9ee78b9d10",
+        "size_in_bytes": 10728
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh-0.26.2-py3.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "6c546328b829b586c8a072a5932ffe799fd7cb7574c2ec0a03bc634bd51faca5",
+        "sha256_in_prefix": "6c546328b829b586c8a072a5932ffe799fd7cb7574c2ec0a03bc634bd51faca5",
+        "size_in_bytes": 558
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh-0.26.2-py3.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh-0.26.2-py3.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "29b45b51808d03522131ba3bf3d984ab5797afdfa585d828d4ae96c3fa7bcccd",
+        "sha256_in_prefix": "29b45b51808d03522131ba3bf3d984ab5797afdfa585d828d4ae96c3fa7bcccd",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "19e9b258563fdee680386133c56b6f53ab6b471fecf59e4e682eed4b55dac67d",
+        "sha256_in_prefix": "19e9b258563fdee680386133c56b6f53ab6b471fecf59e4e682eed4b55dac67d",
+        "size_in_bytes": 495
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/__pycache__/__init__.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "ede4cd756758e0549b370241cf47444e67d1a7e670b23c5dfd8d996419c41aec",
+        "sha256_in_prefix": "ede4cd756758e0549b370241cf47444e67d1a7e670b23c5dfd8d996419c41aec",
+        "size_in_bytes": 294
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/__pycache__/assembling.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "6575f81a0f53e325f62dbdeaaa2fa2330184f185f994bb7c14ad405d7d0bf565",
+        "sha256_in_prefix": "6575f81a0f53e325f62dbdeaaa2fa2330184f185f994bb7c14ad405d7d0bf565",
+        "size_in_bytes": 12053
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/__pycache__/compat.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "1a1be5a4880f42e4ad8a72c3af7cf251d357d10f1d70416c43415f6c6d57bae1",
+        "sha256_in_prefix": "1a1be5a4880f42e4ad8a72c3af7cf251d357d10f1d70416c43415f6c6d57bae1",
+        "size_in_bytes": 3186
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/__pycache__/completion.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "8410a0ad4e3c21946eadb7f07da82ea91df8712e7831d54dbb4c9088b84d8e18",
+        "sha256_in_prefix": "8410a0ad4e3c21946eadb7f07da82ea91df8712e7831d54dbb4c9088b84d8e18",
+        "size_in_bytes": 2688
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/__pycache__/constants.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "37b00f415ab1717982c25a96c70f1991782f5254e7f61e7e0fe2d7f0bfd317b9",
+        "sha256_in_prefix": "37b00f415ab1717982c25a96c70f1991782f5254e7f61e7e0fe2d7f0bfd317b9",
+        "size_in_bytes": 2108
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/__pycache__/decorators.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "e40feee42af49741255d9e37c8ee52d6200dd400f968ec2c53c39f42d91da1db",
+        "sha256_in_prefix": "e40feee42af49741255d9e37c8ee52d6200dd400f968ec2c53c39f42d91da1db",
+        "size_in_bytes": 6034
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/__pycache__/dispatching.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "998445ac83207d51b404a1ab7ab7f1ff457e358b6a117db40c70d9e7ce9eb467",
+        "sha256_in_prefix": "998445ac83207d51b404a1ab7ab7f1ff457e358b6a117db40c70d9e7ce9eb467",
+        "size_in_bytes": 10028
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/__pycache__/exceptions.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "bedd909bf10bde28b07bfd4c546bf10363043dc0e0590899df181498363ea4dc",
+        "sha256_in_prefix": "bedd909bf10bde28b07bfd4c546bf10363043dc0e0590899df181498363ea4dc",
+        "size_in_bytes": 1714
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/__pycache__/helpers.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "a53adf8931c67c5ecabdec2e79c25f6362b5a30b449af886cd885b3eac2a4f4b",
+        "sha256_in_prefix": "a53adf8931c67c5ecabdec2e79c25f6362b5a30b449af886cd885b3eac2a4f4b",
+        "size_in_bytes": 2396
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/__pycache__/interaction.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "77d2550c2fcaf636cd0e99f1c04132d5c8be1c3b40e0a281a9844cadaef3a71d",
+        "sha256_in_prefix": "77d2550c2fcaf636cd0e99f1c04132d5c8be1c3b40e0a281a9844cadaef3a71d",
+        "size_in_bytes": 1916
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/__pycache__/io.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "49c57a0cece80a6962382e0b4364e35bc8c4719fc331871fafe2653f7e0b8aad",
+        "sha256_in_prefix": "49c57a0cece80a6962382e0b4364e35bc8c4719fc331871fafe2653f7e0b8aad",
+        "size_in_bytes": 2272
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/__pycache__/utils.cpython-37.pyc",
+        "path_type": "hardlink",
+        "sha256": "e464550003ebd03e4e73c301fb33736c3c45c72f9747995eb971a61611fa6d8f",
+        "sha256_in_prefix": "e464550003ebd03e4e73c301fb33736c3c45c72f9747995eb971a61611fa6d8f",
+        "size_in_bytes": 1580
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/assembling.py",
+        "path_type": "hardlink",
+        "sha256": "ac79fc421e612a4e0d84482a0343440a36b8667c641cce32c0ca8a139789115c",
+        "sha256_in_prefix": "ac79fc421e612a4e0d84482a0343440a36b8667c641cce32c0ca8a139789115c",
+        "size_in_bytes": 17555
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/compat.py",
+        "path_type": "hardlink",
+        "sha256": "0d384a69df886311febf3dc340374e6c738ec02396bc91f81f6acce08abfc99b",
+        "sha256_in_prefix": "0d384a69df886311febf3dc340374e6c738ec02396bc91f81f6acce08abfc99b",
+        "size_in_bytes": 2834
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/completion.py",
+        "path_type": "hardlink",
+        "sha256": "a318fdbdfc88d560136519e5c1c73b9bfffebb0337f84a9d8be5b3477c2732eb",
+        "sha256_in_prefix": "a318fdbdfc88d560136519e5c1c73b9bfffebb0337f84a9d8be5b3477c2732eb",
+        "size_in_bytes": 2943
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/constants.py",
+        "path_type": "hardlink",
+        "sha256": "169512b060023251a0659b9aa9aefd0705513a88c4e40049d8e4209174b67ba0",
+        "sha256_in_prefix": "169512b060023251a0659b9aa9aefd0705513a88c4e40049d8e4209174b67ba0",
+        "size_in_bytes": 3436
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/decorators.py",
+        "path_type": "hardlink",
+        "sha256": "a80754d98daf41d22c86b001749a2588d31248e8deb59378129929677b10d003",
+        "sha256_in_prefix": "a80754d98daf41d22c86b001749a2588d31248e8deb59378129929677b10d003",
+        "size_in_bytes": 6141
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/dispatching.py",
+        "path_type": "hardlink",
+        "sha256": "e41836d9b7f730966bbefdc1e02b5c2eefcdbaafd12cbc81c64978565be5e27c",
+        "sha256_in_prefix": "e41836d9b7f730966bbefdc1e02b5c2eefcdbaafd12cbc81c64978565be5e27c",
+        "size_in_bytes": 12465
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "c7f5096e93a4766faa7ce769d40e0446f3c1d0992a2fbe065d3957c2abba13e2",
+        "sha256_in_prefix": "c7f5096e93a4766faa7ce769d40e0446f3c1d0992a2fbe065d3957c2abba13e2",
+        "size_in_bytes": 1545
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/helpers.py",
+        "path_type": "hardlink",
+        "sha256": "48a001e4042b9ac5dccd398bf50933049565584ef3006ab0c6162fa54d667a74",
+        "sha256_in_prefix": "48a001e4042b9ac5dccd398bf50933049565584ef3006ab0c6162fa54d667a74",
+        "size_in_bytes": 2151
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/interaction.py",
+        "path_type": "hardlink",
+        "sha256": "5ca9533e8d25aeefd561dd89a699be2e56685bca0356f4a0a8eca33e3b1dcd53",
+        "sha256_in_prefix": "5ca9533e8d25aeefd561dd89a699be2e56685bca0356f4a0a8eca33e3b1dcd53",
+        "size_in_bytes": 2403
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/io.py",
+        "path_type": "hardlink",
+        "sha256": "9df9f20b9dc4fca61726c0a0ddf12236a1c1aacf9ed930bec752ab916548dd5c",
+        "sha256_in_prefix": "9df9f20b9dc4fca61726c0a0ddf12236a1c1aacf9ed930bec752ab916548dd5c",
+        "size_in_bytes": 2986
+      },
+      {
+        "_path": "lib/python3.7/site-packages/argh/utils.py",
+        "path_type": "hardlink",
+        "sha256": "e3223afbf437de6e2faed870569148dd994858667f6f1ed37dfec11ae101d44e",
+        "sha256_in_prefix": "e3223afbf437de6e2faed870569148dd994858667f6f1ed37dfec11ae101d44e",
+        "size_in_bytes": 1676
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "argh==0.26.2=py37_0",
+  "sha256": "9db50eb9635d4786ee07e88f7113420247dc0ab1273a17978d4f6f5704e844f7",
+  "size": 36707,
+  "subdir": "osx-64",
+  "timestamp": 1575416067831,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/argh-0.26.2-py37_0.conda",
+  "version": "0.26.2"
+}

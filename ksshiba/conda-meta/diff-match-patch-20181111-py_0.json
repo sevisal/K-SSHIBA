@@ -1,0 +1,176 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/Users/alexjorguer/anaconda3/pkgs/diff-match-patch-20181111-py_0",
+  "features": "",
+  "files": [
+    "lib/python3.7/site-packages/diff_match_patch-20181111.dist-info/INSTALLER",
+    "lib/python3.7/site-packages/diff_match_patch-20181111.dist-info/LICENSE",
+    "lib/python3.7/site-packages/diff_match_patch-20181111.dist-info/METADATA",
+    "lib/python3.7/site-packages/diff_match_patch-20181111.dist-info/RECORD",
+    "lib/python3.7/site-packages/diff_match_patch-20181111.dist-info/WHEEL",
+    "lib/python3.7/site-packages/diff_match_patch-20181111.dist-info/top_level.txt",
+    "lib/python3.7/site-packages/diff_match_patch/__init__.py",
+    "lib/python3.7/site-packages/diff_match_patch/diff_match_patch.py",
+    "lib/python3.7/site-packages/diff_match_patch/diff_match_patch_py2.py",
+    "lib/python3.7/site-packages/diff_match_patch/tests/__init__.py",
+    "lib/python3.7/site-packages/diff_match_patch/tests/diff_match_patch_test.py",
+    "lib/python3.7/site-packages/diff_match_patch/tests/diff_match_patch_test_py2.py",
+    "lib/python3.7/site-packages/diff_match_patch/tests/speedtest.py",
+    "lib/python3.7/site-packages/diff_match_patch/__pycache__/__init__.cpython-37.pyc",
+    "lib/python3.7/site-packages/diff_match_patch/__pycache__/diff_match_patch.cpython-37.pyc",
+    "lib/python3.7/site-packages/diff_match_patch/__pycache__/diff_match_patch_py2.cpython-37.pyc",
+    "lib/python3.7/site-packages/diff_match_patch/tests/__pycache__/__init__.cpython-37.pyc",
+    "lib/python3.7/site-packages/diff_match_patch/tests/__pycache__/diff_match_patch_test.cpython-37.pyc",
+    "lib/python3.7/site-packages/diff_match_patch/tests/__pycache__/diff_match_patch_test_py2.cpython-37.pyc",
+    "lib/python3.7/site-packages/diff_match_patch/tests/__pycache__/speedtest.cpython-37.pyc"
+  ],
+  "fn": "diff-match-patch-20181111-py_0.tar.bz2",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/Users/alexjorguer/anaconda3/pkgs/diff-match-patch-20181111-py_0",
+    "type": 1
+  },
+  "md5": "723621ca3312bef5f26df8f7d2f334cb",
+  "name": "diff-match-patch",
+  "noarch": "python",
+  "package_tarball_full_path": "/Users/alexjorguer/anaconda3/pkgs/diff-match-patch-20181111-py_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/diff_match_patch-20181111.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/diff_match_patch-20181111.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "sha256_in_prefix": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size_in_bytes": 11358
+      },
+      {
+        "_path": "site-packages/diff_match_patch-20181111.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "0d562cdee17c248a6a9715f7b2a047959708eb6f51a9d55a97d417a8d1ab03e9",
+        "sha256_in_prefix": "0d562cdee17c248a6a9715f7b2a047959708eb6f51a9d55a97d417a8d1ab03e9",
+        "size_in_bytes": 5216
+      },
+      {
+        "_path": "site-packages/diff_match_patch-20181111.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "3ca7386938e18d9d284451c7495b6cc1c73e1aaffaaa5dabc0a513faef0e84d0",
+        "sha256_in_prefix": "3ca7386938e18d9d284451c7495b6cc1c73e1aaffaaa5dabc0a513faef0e84d0",
+        "size_in_bytes": 1537
+      },
+      {
+        "_path": "site-packages/diff_match_patch-20181111.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "23bf6aa29589ebd9794fac196b2b7d55438c79c19918fceedbf89c6d16168e92",
+        "sha256_in_prefix": "23bf6aa29589ebd9794fac196b2b7d55438c79c19918fceedbf89c6d16168e92",
+        "size_in_bytes": 93
+      },
+      {
+        "_path": "site-packages/diff_match_patch-20181111.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "aef9834dc112f977e8e7ca1489eb11e41691498526245421c058637e9c55f6ba",
+        "sha256_in_prefix": "aef9834dc112f977e8e7ca1489eb11e41691498526245421c058637e9c55f6ba",
+        "size_in_bytes": 17
+      },
+      {
+        "_path": "site-packages/diff_match_patch/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "fe3a146c06c85ba2e85788a03b069220b6f901dbde75ae052f7f4872ef66b61b",
+        "sha256_in_prefix": "fe3a146c06c85ba2e85788a03b069220b6f901dbde75ae052f7f4872ef66b61b",
+        "size_in_bytes": 291
+      },
+      {
+        "_path": "site-packages/diff_match_patch/diff_match_patch.py",
+        "path_type": "hardlink",
+        "sha256": "4299ad32e0904591cdc53737a2dfe9a043e21c6e3a5333b559c52ef51106e8ca",
+        "sha256_in_prefix": "4299ad32e0904591cdc53737a2dfe9a043e21c6e3a5333b559c52ef51106e8ca",
+        "size_in_bytes": 67405
+      },
+      {
+        "_path": "site-packages/diff_match_patch/diff_match_patch_py2.py",
+        "path_type": "hardlink",
+        "sha256": "5a826ba95998fb3e8411ffda12f5e2cb381e7e2e664749c5c94e97b61697649c",
+        "sha256_in_prefix": "5a826ba95998fb3e8411ffda12f5e2cb381e7e2e664749c5c94e97b61697649c",
+        "size_in_bytes": 68015
+      },
+      {
+        "_path": "site-packages/diff_match_patch/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "edb6127bbf987cf1432da54e253bdf066a29ae004c4746689d83054d66ff5ac6",
+        "sha256_in_prefix": "edb6127bbf987cf1432da54e253bdf066a29ae004c4746689d83054d66ff5ac6",
+        "size_in_bytes": 193
+      },
+      {
+        "_path": "site-packages/diff_match_patch/tests/diff_match_patch_test.py",
+        "path_type": "hardlink",
+        "sha256": "0650d40e826079f5ecd2504f186ba5302be49de19e5d387189c201a493d1a69e",
+        "sha256_in_prefix": "0650d40e826079f5ecd2504f186ba5302be49de19e5d387189c201a493d1a69e",
+        "size_in_bytes": 42906
+      },
+      {
+        "_path": "site-packages/diff_match_patch/tests/diff_match_patch_test_py2.py",
+        "path_type": "hardlink",
+        "sha256": "3b35b99d1514e74f478b5029854a63adc85b16d86a881ecde7f969d2df6a7fd8",
+        "sha256_in_prefix": "3b35b99d1514e74f478b5029854a63adc85b16d86a881ecde7f969d2df6a7fd8",
+        "size_in_bytes": 43028
+      },
+      {
+        "_path": "site-packages/diff_match_patch/tests/speedtest.py",
+        "path_type": "hardlink",
+        "sha256": "8c7c9e08f0f70314926581dff1ced65157422fd46ed5c99802114af14e0ea063",
+        "sha256_in_prefix": "8c7c9e08f0f70314926581dff1ced65157422fd46ed5c99802114af14e0ea063",
+        "size_in_bytes": 1425
+      },
+      {
+        "_path": "lib/python3.7/site-packages/diff_match_patch/__pycache__/__init__.cpython-37.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.7/site-packages/diff_match_patch/__pycache__/diff_match_patch.cpython-37.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.7/site-packages/diff_match_patch/__pycache__/diff_match_patch_py2.cpython-37.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.7/site-packages/diff_match_patch/tests/__pycache__/__init__.cpython-37.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.7/site-packages/diff_match_patch/tests/__pycache__/diff_match_patch_test.cpython-37.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.7/site-packages/diff_match_patch/tests/__pycache__/diff_match_patch_test_py2.cpython-37.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.7/site-packages/diff_match_patch/tests/__pycache__/speedtest.cpython-37.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "diff-match-patch==20181111=py_0",
+  "sha256": "b2177402876672481384e261b3cc5ddbd3c9b04a3961af869d5fef7582373b3f",
+  "size": 40324,
+  "subdir": "noarch",
+  "timestamp": 1575414250758,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/diff-match-patch-20181111-py_0.tar.bz2",
+  "version": "20181111"
+}
