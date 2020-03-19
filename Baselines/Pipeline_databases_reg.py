@@ -270,7 +270,7 @@ def Baselines_func(folds, base, database):
                             "alpha": [0.00005, 0.0005]
                             }
                     clf = MLPRegressor(max_iter=1000)
-                    clf_cv = GridSearchCV(clf, grid, cv=10)
+                    clf_cv = GridSearchCV(clf, grid, cv=10, n_jobs=-1, scoring='r2', vebose=1)
                     clf_cv.fit(P_tr,Y_tr)
                     results[base]['R2'][i] = r2_score(Y_tst, clf_cv.predict(P_tst), multioutput = 'uniform_average') # = 'variance_weighted') 
                     results[base]['mse'][i] = mse(Y_tst, clf_cv.predict(P_tst), multioutput = 'uniform_average') 
