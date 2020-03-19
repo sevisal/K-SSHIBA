@@ -13,6 +13,7 @@ os.sys.path.append(prv_fold +'\\lib\\')
 
 if os.path.exists("he_terminado.txt"):
   os.remove("he_terminado.txt")
+  print("Removed")
 else:
   print("The script has started.")
 
@@ -72,9 +73,9 @@ my_dict['jura'] =   [3]
 my_dict['wq'] =     [14]
 my_dict['enb'] =    [2]
 my_dict['slump'] =  [3]
-my_dict['andro'] =  [6]
-my_dict['osales'] = [12]
-my_dict['scpf'] =   [3]
+#my_dict['andro'] =  [6]
+#my_dict['osales'] = [12]
+#my_dict['scpf'] =   [3]
 
 
 
@@ -180,10 +181,10 @@ def Baselines_func(folds, base, database):
                 print(X_tr.shape)
                 X_tst = X[pos_tst,:]
                 
-                from sklearn.impute import SimpleImputer
-                simp = SimpleImputer(missing_values=np.nan, strategy='mean')
-                X_tr = simp.fit_transform(X_tr)
-                X_tst = simp.transform(X_tst)
+                #from sklearn.impute import SimpleImputer
+                #simp = SimpleImputer(missing_values=np.nan, strategy='mean')
+                #X_tr = simp.fit_transform(X_tr)
+                #X_tst = simp.transform(X_tst)
                 
                 # Normalizing the data
                 scaler = StandardScaler()
