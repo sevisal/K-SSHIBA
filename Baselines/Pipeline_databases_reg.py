@@ -141,7 +141,7 @@ def Baselines_func(folds, base, database):
     verboseprint = print if verbose else lambda *a, **k: None
     
     # bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR', '_KRR', '_SVRrbf', '_NN'] # Name of the baseline
-    bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR', '_SVRrbf']
+    bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR', '_NN']
     for base in bases:
         # We separate the baseline into the different options available
         pipeline = base.split('_')
