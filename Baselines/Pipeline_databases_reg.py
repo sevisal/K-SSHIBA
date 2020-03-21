@@ -141,7 +141,7 @@ def Baselines_func(folds, base, database):
     verboseprint = print if verbose else lambda *a, **k: None
     
     # bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR', '_KRR', '_SVRrbf', '_NN'] # Name of the baseline
-    bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR', '_NN']
+    bases = ['_NN']
     for base in bases:
         # We separate the baseline into the different options available
         pipeline = base.split('_')
@@ -160,6 +160,7 @@ def Baselines_func(folds, base, database):
                     results[base]['R2'] = np.zeros((len(fold_tst),))
                     results[base]['mse'] = np.zeros((len(fold_tst),))
                     results[base]['Kc'] = np.zeros((len(fold_tst),))
+                    results[base]['params'] = [[] for i in range(len(fold_tst))]
                     verboseprint ("... Model defined")
             else:
                 results = {}
@@ -261,13 +262,12 @@ def Baselines_func(folds, base, database):
                     clf = KernelRidge(kernel = 'rbf')
                     clf_cv = GridSearchCV(clf, grid, cv=10)
                     clf_cv.fit(P_tr,Y_tr)
+                    results[base]['params'][i] = clf_cv.best_params_
                     results[base]['R2'][i] = r2_score(Y_tst, clf_cv.predict(P_tst), multioutput = 'uniform_average') # = 'variance_weighted') 
                     results[base]['mse'][i] = mse(Y_tst, clf_cv.predict(P_tst), multioutput = 'uniform_average') 
                 elif pipeline[1] == 'NN':
-                    grid = {"hidden_layer_sizes": [(100,), (100,50,100), (50,100,50)],
-                            "activation": ["logistic", "tanh", "relu"],
+                    grid = {"hidden_layer_sizes": [(20,), (35,), (50,), (100), (75),],
                             "solver": ["adam"],
-                            "alpha": [0.00005, 0.0005]
                             }
                     clf = MLPRegressor(max_iter=1000)
                     clf_cv = GridSearchCV(clf, grid, cv=10, n_jobs=-1, scoring='r2', vebose=1)
