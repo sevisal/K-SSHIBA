@@ -1,9 +1,13 @@
 import numpy as np
 import os
 import pickle
+import pandas as pd
 from time import time
 from sklearn.metrics import roc_curve, auc, accuracy_score
 from sklearn.neural_network import MLPRegressor
+from sklearn.pipeline import Pipeline
+from sklearn.metrics.pairwise import rbf_kernel
+
 
 dirpath = os.getcwd()
 foldername = os.path.basename(dirpath)
@@ -85,7 +89,7 @@ with open('Paper_results.pkl', 'wb') as output:
 paper_res = pickle.load( open( 'Paper_results.pkl', "rb" ), encoding='latin1' )
 
 
-def Baselines_func(folds, base, database):
+def Baselines_func(folds, base, database, val=False):
 
     # database = 'Satellite' #Here we specify the desired database
     # database = 'atp1d'
@@ -141,7 +145,8 @@ def Baselines_func(folds, base, database):
     verboseprint = print if verbose else lambda *a, **k: None
     
     # bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR', '_KRR', '_SVRrbf', '_NN'] # Name of the baseline
-    bases = ['_NN']
+    bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR']
+    
     for base in bases:
         # We separate the baseline into the different options available
         pipeline = base.split('_')
@@ -160,7 +165,7 @@ def Baselines_func(folds, base, database):
                     results[base]['R2'] = np.zeros((len(fold_tst),))
                     results[base]['mse'] = np.zeros((len(fold_tst),))
                     results[base]['Kc'] = np.zeros((len(fold_tst),))
-                    results[base]['params'] = [[] for i in range(len(fold_tst))]
+                    results[base]['gamma_used'] = np.zeros((len(fold_tst),))
                     verboseprint ("... Model defined")
             else:
                 results = {}
@@ -168,18 +173,19 @@ def Baselines_func(folds, base, database):
                 results[base]['R2'] = np.zeros((len(fold_tst),))
                 results[base]['mse'] = np.zeros((len(fold_tst),))
                 results[base]['Kc'] = np.zeros((len(fold_tst),))
+                results[base]['gamma_used'] = np.zeros((len(fold_tst),))
             
             verboseprint('---------> Fold '+str(i)+' <---------')   
             
             if results[base]['R2'][i] == 0.0:
                 # Splitting the data into training and test sets.
+                
                 pos_tr = fold_tst[i][0]
                 pos_tst =  fold_tst[i][1]
+                
                 Y_tr = Y[pos_tr] 
-                print(Y_tr.shape)
                 Y_tst = Y[pos_tst]
                 X_tr = X[pos_tr,:]
-                print(X_tr.shape)
                 X_tst = X[pos_tst,:]
                 
                 #from sklearn.impute import SimpleImputer
@@ -192,8 +198,60 @@ def Baselines_func(folds, base, database):
                 X_tr = scaler.fit_transform(X_tr)
                 X_tst = scaler.transform(X_tst)
         
+                if val:
+                    if pipeline[0] == 'KPCA':
+                        gamma_val = np.power(2*np.ones(16),np.arange(-12,4))/(np.sqrt(n_classes))
+                        r2_val = np.zeros((len(fold_tst),len(gamma_val)))
+                        for j in np.arange(len(fold_tst)):
+                            pos_tr2 = dict_fold_val[i][j][0]
+                            pos_val =  dict_fold_val[i][j][1]
+                            Y_val = Y_tr[pos_val]
+                            Y_tr2 = Y_tr[pos_tr2]
+                            X_val = X_tr[pos_val,:]
+                            X_tr2 = X_tr[pos_tr2,:]
+                            
+                            scaler = StandardScaler()
+                            X_tr2 = scaler.fit_transform(X_tr2)
+                            X_val = scaler.transform(X_val)
+                            
+                            for p, g in enumerate(gamma_val):
+                                K_tr = rbf_kernel(X_tr2, X_tr2, gamma=g)
+                                K_val = rbf_kernel(X_val, X_tr2)
+                                K_tr = center_K(K_tr)
+                                K_val = center_K(K_val)
+                                if pipeline[0] == 'KPCA':
+                                    pca = PCA()
+                                    P_tr = pca.fit_transform(K_tr)
+                                    P_tst = pca.transform(K_val)
+                                    # Selecting the latent factors that explain 95% of the variance.
+                                    Kc = 0
+                                    while np.sum(pca.explained_variance_ratio_[:Kc]) < 0.95:
+                                        Kc = Kc + 1
+                                    P_tr = P_tr[:, :Kc]
+                                    P_tst = P_tst[:, :Kc]
+                                
+                                elif pipeline[0] == 'KCCA':
+                                    # KCCA
+                                    cca = CCA(n_components = Y_tr.shape[1]-1).fit(K_tr, Y_tr2)
+                                    P_tr = cca.transform(K_tr)
+                                    P_tst = cca.transform(K_val)
+                                if pipeline[1] == 'LR':
+                                    # Linear Regression
+                                    reg = LinearRegression()
+                                    reg.fit(P_tr, Y_tr2)
+                                    Y_pred = reg.predict(P_tst)
+                                    r2_val[j,p] = r2_score(Y_val, Y_pred, multioutput = 'uniform_average')
+                                    
+                        r2_mean = np.mean(r2_val, axis=0)
+                        gamma = gamma_val[np.argmax(r2_mean)]
+                        sig = np.sqrt(1/(2*gamma))
+                
+                else:
+                    sig=0
+                    
+                
                 # Generating RBF kernel and calculating the gamma value.
-                K_tr, sig = rbf_kernel_sig(X_tr, X_tr)
+                K_tr, sig = rbf_kernel_sig(X_tr, X_tr, sig=sig)
                 K_tst, sig = rbf_kernel_sig(X_tst, X_tr, sig = sig)
                 
                 # Center the kernel.
@@ -204,6 +262,7 @@ def Baselines_func(folds, base, database):
                 # Defining the feature extracting algorithm. #
                 ##############################################
                 verboseprint('Extracting features...')
+
                 if pipeline[0] == 'KPCA':
                     # KPCA
                     pca = PCA()
@@ -216,6 +275,8 @@ def Baselines_func(folds, base, database):
                     results[base]['Kc'][i] = Kc
                     P_tr = P_tr[:, :Kc]
                     P_tst = P_tst[:, :Kc]
+                    results[base]['gamma_used'][i] = gamma
+                    print("Gamma used: "+str(gamma))
                     verboseprint('... projections defined.')
                 elif pipeline[0] == 'KCCA':
                     # KCCA
@@ -223,6 +284,8 @@ def Baselines_func(folds, base, database):
                     results[base]['Kc'][i] = Y_tr.shape[1]-1
                     P_tr = cca.transform(K_tr)
                     P_tst = cca.transform(K_tst)
+                    results[base]['gamma_used'][i] = gamma
+                    print("Gamma used: "+str(gamma))
                     verboseprint('... projections defined.')
                 else:
                     # No feature extraction and, therefore, no kernel used.
@@ -241,6 +304,7 @@ def Baselines_func(folds, base, database):
                     Y_pred = reg.predict(P_tst)
                     results[base]['R2'][i] = r2_score(Y_tst, Y_pred, multioutput = 'uniform_average') # = 'variance_weighted') 
                     results[base]['mse'][i] = mse(Y_tst, Y_pred, multioutput = 'uniform_average') 
+                    
                 elif pipeline[1] == 'SVRrbf':
                     # SVM rbf, no lineal.
                     # Hyperparameters determined using grid search 10 fold cross validation.
@@ -314,7 +378,7 @@ def Baselines_func(folds, base, database):
 for database in paper_res:
     print("-----------------------")
     print(database)
-    Baselines_func(10,'base', database)
+    Baselines_func(10,'base', database, val=True)
     
 file1 = open("he_terminado.txt","w")
         

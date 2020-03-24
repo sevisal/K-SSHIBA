@@ -7,6 +7,9 @@ paper_res = pickle.load( open( 'Paper_results.pkl', "rb" ), encoding='latin1' )
 r2_scores = np.zeros((len(paper_res),4,2))
 mse_scores = np.zeros((len(paper_res),4,2))
 kcs = np.zeros((len(paper_res),4,2))
+n_classes = [6, 6, 16, 16, 2, 3, 14, 2, 3]
+gamma_val = np.power(2*np.ones(16),np.arange(-12,4))
+
 for e,database in enumerate(paper_res):
     print("-----------------------DATABASE "+database+"----------------------")
     folds = 10
@@ -35,6 +38,8 @@ for e,database in enumerate(paper_res):
         kcs[e,j,0] = np.mean(results[base]['Kc'])
         kcs[e,j,1] = np.std(results[base]['Kc'])
         print(base +' mean Kc:  %0.3f +/- %0.3f' %(np.mean(results[base]['Kc']) , np.std(results[base]['Kc'])))
+        print(base +' mean Gamma used:  %0.5f' %(np.mean(results[base]['gamma_used'])))
+        print("Smallest and greatest gamma possible: %0.5f and %0.5f" % (gamma_val[0]/n_classes[j], gamma_val[-1]/n_classes[j]))
 
 import seaborn as sns
 import matplotlib.pyplot as plt
