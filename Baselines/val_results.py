@@ -1,9 +1,11 @@
+# -*- coding: utf-8 -*-
 import numpy as np
 import os
 import pickle
-from time import time
 from sklearn.metrics import roc_curve, auc, accuracy_score
 from sklearn.neural_network import MLPRegressor
+from sklearn.metrics.pairwise import rbf_kernel
+
 
 dirpath = os.getcwd()
 foldername = os.path.basename(dirpath)
@@ -79,13 +81,17 @@ my_dict['slump'] =  [3]
 
 
 
+
+
+
+
 with open('Paper_results.pkl', 'wb') as output:
     pickle.dump(my_dict, output, pickle.HIGHEST_PROTOCOL)
     
 paper_res = pickle.load( open( 'Paper_results.pkl', "rb" ), encoding='latin1' )
 
 
-def Baselines_func(folds, base, database):
+def Baselines_func(folds, base, database, val=False):
 
     # database = 'Satellite' #Here we specify the desired database
     # database = 'atp1d'
@@ -127,25 +133,27 @@ def Baselines_func(folds, base, database):
 
 
     import copy
+    import random
     from sklearn.decomposition import PCA
     from sklearn.cross_decomposition import CCA
-    from sklearn.svm import SVR
-    from sklearn.kernel_ridge import KernelRidge
-    from sklearn.model_selection import GridSearchCV
     from sklearn.preprocessing import StandardScaler
     from sklearn.linear_model import LinearRegression
-    from sklearn.metrics import mean_squared_error as mse
     from sklearn.metrics import r2_score
     
     verbose = 1
     verboseprint = print if verbose else lambda *a, **k: None
     
     # bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR', '_KRR', '_SVRrbf', '_NN'] # Name of the baseline
-    bases = ['_NN']
+    bases = ['KPCA_LR', 'KCCA_LR']
+    r2_final= {'KPCA_LR': [], 'KCCA_LR': []}
+    v_dim = np.arange(10,110,10)
+    
     for base in bases:
         # We separate the baseline into the different options available
         pipeline = base.split('_')
         print('Training '+pipeline[0]+' FE and '+pipeline[1]+' Classifier')
+        r2_val = np.zeros((len(v_dim), len(fold_tst), len(fold_tst)))
+        
         for i in np.arange(len(fold_tst)):
             # At his point we check whether the file where we want to store the results does or doesn't already exist.
             # If it does we check if this baseline has been stored and, if so, we load it. If the baseline isn't in the file, we define it.
@@ -160,7 +168,7 @@ def Baselines_func(folds, base, database):
                     results[base]['R2'] = np.zeros((len(fold_tst),))
                     results[base]['mse'] = np.zeros((len(fold_tst),))
                     results[base]['Kc'] = np.zeros((len(fold_tst),))
-                    results[base]['params'] = [[] for i in range(len(fold_tst))]
+                    results[base]['gamma_used'] = np.zeros((len(fold_tst),))
                     verboseprint ("... Model defined")
             else:
                 results = {}
@@ -168,18 +176,19 @@ def Baselines_func(folds, base, database):
                 results[base]['R2'] = np.zeros((len(fold_tst),))
                 results[base]['mse'] = np.zeros((len(fold_tst),))
                 results[base]['Kc'] = np.zeros((len(fold_tst),))
+                results[base]['gamma_used'] = np.zeros((len(fold_tst),))
             
             verboseprint('---------> Fold '+str(i)+' <---------')   
             
             if results[base]['R2'][i] == 0.0:
                 # Splitting the data into training and test sets.
+                
                 pos_tr = fold_tst[i][0]
                 pos_tst =  fold_tst[i][1]
+                
                 Y_tr = Y[pos_tr] 
-                print(Y_tr.shape)
                 Y_tst = Y[pos_tst]
                 X_tr = X[pos_tr,:]
-                print(X_tr.shape)
                 X_tst = X[pos_tst,:]
                 
                 #from sklearn.impute import SimpleImputer
@@ -191,95 +200,80 @@ def Baselines_func(folds, base, database):
                 scaler = StandardScaler()
                 X_tr = scaler.fit_transform(X_tr)
                 X_tst = scaler.transform(X_tst)
+                
+                gamma = {}
+                gamma['atp1d'] =  [0.00207, 0.00159, 0.00159]
+                gamma['atp7d'] =  [0.00159, 0.00159, 0.00159]
+                gamma['oes97'] =  [0.00342, 0.00391, 0.00391]
+                gamma['oes10'] =  [0.00391, 0.00391, 0.00391]
+                gamma['edm'] =    [0.07513, 0.08839, 0.08839]
+                gamma['jura'] =   [0.07217, 0.07217, 0.07217]
+                gamma['wq'] =     [0.13363, 0.13363, 0.13363]
+                gamma['enb'] =    [0.08839, 0.08839, 0.08839]
+                gamma['slump'] =  [0.13712, 0.07217, 0.07217]
         
-                # Generating RBF kernel and calculating the gamma value.
-                K_tr, sig = rbf_kernel_sig(X_tr, X_tr)
-                K_tst, sig = rbf_kernel_sig(X_tst, X_tr, sig = sig)
                 
-                # Center the kernel.
-                K_tr = center_K(K_tr)
-                K_tst = center_K(K_tst)
+                for j in np.arange(len(fold_tst)):
+                    pos_tr2 = dict_fold_val[i][j][0]
+                    pos_val =  dict_fold_val[i][j][1]
+                    Y_val = Y_tr[pos_val]
+                    Y_tr2 = Y_tr[pos_tr2]
+                    X_val = X_tr[pos_val,:]
+                    X_tr2 = X_tr[pos_tr2,:]
+                    
+                    scaler = StandardScaler()
+                    X_tr2 = scaler.fit_transform(X_tr2)
+                    X_val = scaler.transform(X_val)
+                    
+                    #for k in np.arange(0,5):
+                    #
+                    for p, ss in enumerate(v_dim):
+                        V = np.copy(X_tr2)
+                        idx = np.random.randint(V.shape[0], size=int(ss*V.shape[0]))
+                        V_ss = V[idx, :]
+                        K_tr = rbf_kernel(X_tr2, V_ss, gamma[database][0])
+                        K_val = rbf_kernel(X_val, V_ss, gamma[database][0])
+                        K_tr = center_K(K_tr)
+                        K_val = center_K(K_val)
+                        
+                        if pipeline[0] == 'KPCA':
+                            
+    
+                            pca = PCA()
+                            P_tr = pca.fit_transform(K_tr)
+                            P_tst = pca.transform(K_val)
+                            # Selecting the latent factors that explain 95% of the variance.
+                            Kc = 0
+                            while np.sum(pca.explained_variance_ratio_[:Kc]) < 0.95:
+                                Kc = Kc + 1
+                            P_tr = P_tr[:, :Kc]
+                            P_tst = P_tst[:, :Kc]
+                            print("Trained a KPCA_LR")
+                            
+                        
+                        elif pipeline[0] == 'KCCA':
+                            # KCCA
+                            cca = CCA(n_components = Y_tr.shape[1]-1).fit(K_tr, Y_tr2)
+                            P_tr = cca.transform(K_tr)
+                            P_tst = cca.transform(K_val)
+                            #[p,i,j] = r2_score(Y_val, cca.predict(K_val), multioutput = 'uniform_average') # = 'variance_weighted') 
+                            print("Trained a KCCA_LR")
+                        if pipeline[1] == 'LR':
+                            # Linear Regression
+                            reg = LinearRegression()
+                            reg.fit(P_tr, Y_tr2)
+                            Y_pred = reg.predict(P_tst)
+                            r2_val[p,i,j] = r2_score(Y_val, Y_pred, multioutput = 'uniform_average')
+                            
+                        print("------%%%%%-----")
+                        print("Something trained")
+                        print("i:",i)
+                        print("j:",j)
+                        print("p:",p)
+                        print(r2_val[p,i,j])
+                        print("------%%%%%-----")
                 
-                ##############################################
-                # Defining the feature extracting algorithm. #
-                ##############################################
-                verboseprint('Extracting features...')
-                if pipeline[0] == 'KPCA':
-                    # KPCA
-                    pca = PCA()
-                    P_tr = pca.fit_transform(K_tr)
-                    P_tst = pca.transform(K_tst)
-                    # Selecting the latent factors that explain 95% of the variance.
-                    Kc = 0
-                    while np.sum(pca.explained_variance_ratio_[:Kc]) < 0.95:
-                        Kc = Kc + 1
-                    results[base]['Kc'][i] = Kc
-                    P_tr = P_tr[:, :Kc]
-                    P_tst = P_tst[:, :Kc]
-                    verboseprint('... projections defined.')
-                elif pipeline[0] == 'KCCA':
-                    # KCCA
-                    cca = CCA(n_components = Y_tr.shape[1]-1).fit(K_tr, Y_tr)
-                    results[base]['Kc'][i] = Y_tr.shape[1]-1
-                    P_tr = cca.transform(K_tr)
-                    P_tst = cca.transform(K_tst)
-                    verboseprint('... projections defined.')
-                else:
-                    # No feature extraction and, therefore, no kernel used.
-                    P_tr = np.copy(X_tr)
-                    P_tst = np.copy(X_tst)
-                    verboseprint('... no projections defined.')
-                
-                ############################
-                # Training the classifier. #
-                ############################
-                verboseprint('Training the classifier...')
-                if pipeline[1] == 'LR':
-                    # Linear Regression
-                    reg = LinearRegression()
-                    reg.fit(P_tr, Y_tr)
-                    Y_pred = reg.predict(P_tst)
-                    results[base]['R2'][i] = r2_score(Y_tst, Y_pred, multioutput = 'uniform_average') # = 'variance_weighted') 
-                    results[base]['mse'][i] = mse(Y_tst, Y_pred, multioutput = 'uniform_average') 
-                elif pipeline[1] == 'SVRrbf':
-                    # SVM rbf, no lineal.
-                    # Hyperparameters determined using grid search 10 fold cross validation.
-                    r2_tmp = []
-                    mse_tmp = []
-                    for output in np.arange(Y_tr.shape[1]):
-                        grid = {"C": np.logspace(-4,4,11), "gamma": np.array([0.125, 0.25, 0.5, 1, 2, 4, 8])/(np.sqrt(Y_tr.shape[1]))}
-                        clf = SVR(kernel = 'rbf')
-                        clf_cv = GridSearchCV(clf, grid, cv=10, n_jobs=-1)
-                        clf_cv.fit(P_tr, Y_tr[:, output])
-                        r2_tmp.append(r2_score(Y_tst[:, output][:, np.newaxis], clf_cv.predict(P_tst)))
-                        mse_tmp.append(mse(Y_tst[:, output][:, np.newaxis], clf_cv.predict(P_tst)))
-                    results[base]['R2'][i] = np.mean(r2_tmp) # = 'variance_weighted') 
-                    results[base]['mse'][i] = np.mean(mse_tmp)
-                elif pipeline[1] == 'KRR':
-                    # SVM rbf, no lineal.
-                    # Hyperparameters determined using grid search 10 fold cross validation.
-                    grid = {"alpha": np.logspace(-2*10,2,11), "gamma": np.logspace(-2*10,2,11)/(np.sqrt(Y_tr.shape[1]))}
-                    clf = KernelRidge(kernel = 'rbf')
-                    clf_cv = GridSearchCV(clf, grid, cv=10)
-                    clf_cv.fit(P_tr,Y_tr)
-                    results[base]['params'][i] = clf_cv.best_params_
-                    results[base]['R2'][i] = r2_score(Y_tst, clf_cv.predict(P_tst), multioutput = 'uniform_average') # = 'variance_weighted') 
-                    results[base]['mse'][i] = mse(Y_tst, clf_cv.predict(P_tst), multioutput = 'uniform_average') 
-                elif pipeline[1] == 'NN':
-                    grid = {"hidden_layer_sizes": [(20,), (35,), (50,), (100), (75),],
-                            "solver": ["adam"],
-                            }
-                    clf = MLPRegressor(max_iter=1000)
-                    clf_cv = GridSearchCV(clf, grid, cv=10, n_jobs=-1, scoring='r2', verbose=1)
-                    clf_cv.fit(P_tr,Y_tr)
-                    results[base]['R2'][i] = r2_score(Y_tst, clf_cv.predict(P_tst), multioutput = 'uniform_average') # = 'variance_weighted') 
-                    results[base]['mse'][i] = mse(Y_tst, clf_cv.predict(P_tst), multioutput = 'uniform_average') 
-                else:
-                    try:
-                        results[base]['R2'][i] = r2_score(Y_tst, cca.predict(K_tst), multioutput = 'uniform_average') # = 'variance_weighted') 
-                        results[base]['mse'][i] = mse(Y_tst, cca.predict(K_tst), multioutput = 'uniform_average') 
-                    except:
-                        verboseprint('The selected classifier is not recognised.')
+                r2_final[base].append(r2_val)
                 verboseprint('... classifier trained.\n')
                 # Storing the results.
                 verboseprint(base + ' R2: %0.2f%%' %(results[base]['R2'][i]*100))
@@ -296,25 +290,36 @@ def Baselines_func(folds, base, database):
             else:
                 verboseprint('Fold previously trained. ' + base + ' R2: %0.3f\n                                mse: %0.3f' %(results[base]['R2'][i], results[base]['mse'][i]))
         
-        print(base +' mean R2:  %0.3f +/- %0.3f%%' %(np.mean(results[base]['R2']) , np.std(results[base]['R2'])))
-        print(base +' mean MSE: %0.3f +/- %0.3f' %(np.mean(results[base]['mse']) , np.std(results[base]['mse'])))
-        print(base +' mean Kc:  %0.3f +/- %0.3f' %(np.mean(results[base]['Kc']) , np.std(results[base]['Kc'])))
-
-# if __name__ == "__main__":
-
-#     from optparse import *
-
-#     parser = OptionParser()
-#     parser.add_option("--f", type="int", dest="folds")
-#     parser.add_option("--b", type="str", dest="base")
-
-#     (opt, args) = parser.parse_args()   
-#     Baselines_func(opt.folds, opt.base)
-        
-for database in paper_res:
-    print("-----------------------")
-    print(database)
-    Baselines_func(10,'base', database)
     
+        #print(base +' mean R2:  %0.3f +/- %0.3f%%' %(np.mean(results[base]['R2']) , np.std(results[base]['R2'])))
+        #print(base +' mean MSE: %0.3f +/- %0.3f' %(np.mean(results[base]['mse']) , np.std(results[base]['mse'])))
+        #print(base +' mean Kc:  %0.3f +/- %0.3f' %(np.mean(results[base]['Kc']) , np.std(results[base]['Kc'])))
+    return r2_final
+
+best_ss = []
+database = "slump"
+print("-----------------------")
+print(database)
+result = Baselines_func(10,'base', database, val=True)
+best_ss.append(result)
+filename = database+"ss_val.pkl"
 file1 = open("he_terminado.txt","w")
+
+with open(filename, "wb") as output:
+    pickle.dump(result, output)
+
+# for database in paper_res:
+#     print("-----------------------")
+#     print(database)
+#     result = Baselines_func(10,'base', database, val=True)
+#     best_ss.append(result)
+#     filename = database+"ss_val.pkl"
+#     with open(filename, "wb") as output:
+#         pickle.dump(result, output)
+
+# filename2= "all_results_ss.pkl"
+# with open(filename2, "wb") as output:
+#         pickle.dump(best_ss, output)
+# file1 = open("he_terminado.txt","w")
         
+
