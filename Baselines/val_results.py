@@ -217,12 +217,13 @@ def Baselines_func(folds, base, database, val=False, verbose=True ):
                             V = np.copy(X_tr2)
                             idx = np.random.randint(V.shape[0], size=int(ss*V.shape[0]))
                             V_ss = V[idx, :]
-                            K_tr = rbf_kernel(X_tr2, V_ss, gamma[database][0])
-                            K_val = rbf_kernel(X_val, V_ss, gamma[database][0])
-                            K_tr = center_K(K_tr)
-                            K_val = center_K(K_val)
                             
                             if pipeline[0] == 'KPCA':
+                                K_tr = rbf_kernel(X_tr2, V_ss, gamma[database][0])
+                                K_val = rbf_kernel(X_val, V_ss, gamma[database][0])
+                                K_tr = center_K(K_tr)
+                                K_val = center_K(K_val)
+                                
                                 pca = PCA()
                                 P_tr = pca.fit_transform(K_tr)
                                 P_tst = pca.transform(K_val)
@@ -237,6 +238,11 @@ def Baselines_func(folds, base, database, val=False, verbose=True ):
                             
                             elif pipeline[0] == 'KCCA':
                                 # KCCA
+                                K_tr = rbf_kernel(X_tr2, V_ss, gamma[database][2])
+                                K_val = rbf_kernel(X_val, V_ss, gamma[database][2])
+                                K_tr = center_K(K_tr)
+                                K_val = center_K(K_val)
+                                
                                 cca = CCA(n_components = Y_tr.shape[1]-1).fit(K_tr, Y_tr2)
                                 P_tr = cca.transform(K_tr)
                                 P_tst = cca.transform(K_val)
@@ -284,7 +290,8 @@ def Baselines_func(folds, base, database, val=False, verbose=True ):
     return r2_final
 
 #best_ss = []
-database = "slump"
+
+database = "wq"
 print("-----------------------")
 print(database)
 result = Baselines_func(10,'base', database, val=True)
