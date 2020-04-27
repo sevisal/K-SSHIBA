@@ -169,6 +169,11 @@ def Baselines_func(folds, base, database, val=False):
         
         
         for k in range(10):
+            results = {}
+            results[base] = {}
+            results[base]['R2'] = np.zeros((len(fold_tst),len(v_dim)))
+            results[base]['mse'] = np.zeros((len(fold_tst),len(v_dim)))
+            results[base]['Kc'] = np.zeros((len(fold_tst),len(v_dim)))
             for i in np.arange(len(fold_tst)):
                 # At his point we check whether the file where we want to store the results does or doesn't already exist.
                 # If it does we check if this baseline has been stored and, if so, we load it. If the baseline isn't in the file, we define it.
@@ -185,11 +190,7 @@ def Baselines_func(folds, base, database, val=False):
                 #         results[base]['Kc'] = np.zeros((len(fold_tst),len(v_dim)))
                 #         verboseprint ("... Model defined")
                 # else:
-                results = {}
-                results[base] = {}
-                results[base]['R2'] = np.zeros((len(fold_tst),len(v_dim)))
-                results[base]['mse'] = np.zeros((len(fold_tst),len(v_dim)))
-                results[base]['Kc'] = np.zeros((len(fold_tst),len(v_dim)))
+                
                 
                 verboseprint('---------> Fold '+str(i)+' <---------')   
                 
@@ -355,7 +356,7 @@ def Baselines_func(folds, base, database, val=False):
 #     (opt, args) = parser.parse_args()   
 #     Baselines_func(opt.folds, opt.base)
     
-dbs = ["edm", "jura", "slump", "oes10", "wq", "enb"]
+dbs = ["atp1d", "atp7d", "oes97", "edm", "jura", "slump", "oes10", "wq", "enb"]
 for database in dbs:
     print("-----------------------")
     print(database)
