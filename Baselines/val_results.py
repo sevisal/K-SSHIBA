@@ -266,23 +266,23 @@ def Baselines_func(folds, base, database, val=False, verbose=True ):
                             elif pipeline[0] == 'KCCA':
                                 # KCCA
                                 lf_val[p, i, j] = Y_tr.shape[1]-1
-                                # K_tr = rbf_kernel(X_tr2, V_ss, gamma[database][2])
-                                # K_val = rbf_kernel(X_val, V_ss, gamma[database][2])
-                                # K_tr = center_K(K_tr)
-                                # K_val = center_K(K_val)
+                                K_tr = rbf_kernel(X_tr2, V_ss, gamma[database][2])
+                                K_val = rbf_kernel(X_val, V_ss, gamma[database][2])
+                                K_tr = center_K(K_tr)
+                                K_val = center_K(K_val)
                                 
-                                # cca = CCA(n_components = Y_tr.shape[1]-1).fit(K_tr, Y_tr2)
-                                # P_tr = cca.transform(K_tr)
-                                # P_tst = cca.transform(K_val)
-                                #[p,i,j] = r2_score(Y_val, cca.predict(K_val), multioutput = 'uniform_average') # = 'variance_weighted') 
+                                cca = CCA(n_components = Y_tr.shape[1]-1).fit(K_tr, Y_tr2)
+                                P_tr = cca.transform(K_tr)
+                                P_tst = cca.transform(K_val)
+                                [p,i,j] = r2_score(Y_val, cca.predict(K_val), multioutput = 'uniform_average') # = 'variance_weighted') 
                                 print("Trained a KCCA_LR")
                             if pipeline[1] == 'LR':
                                 # Linear Regression
-                                print("Just doing the LatentFactorAnalysis")
-                                # reg = LinearRegression()
-                                # reg.fit(P_tr, Y_tr2)
-                                # Y_pred = reg.predict(P_tst)
-                                # r2_val[p,i,j] = r2_score(Y_val, Y_pred, multioutput = 'uniform_average')
+                                #print("Just doing the LatentFactorAnalysis")
+                                reg = LinearRegression()
+                                reg.fit(P_tr, Y_tr2)
+                                Y_pred = reg.predict(P_tst)
+                                r2_val[p,i,j] = r2_score(Y_val, Y_pred, multioutput = 'uniform_average')
                                 
                             print("------%%%%%-----")
                             print("Something trained")
@@ -310,27 +310,27 @@ def Baselines_func(folds, base, database, val=False, verbose=True ):
                 else:
                     verboseprint('Fold previously trained. ' + base + ' R2: %0.3f\n                                mse: %0.3f' %(results[base]['R2'][i], results[base]['mse'][i]))
             
-            # r2_total[:, :, :, z] = r2_val
+            r2_total[:, :, :, z] = r2_val
             lf_total[:, :, :, z] = lf_val
-        # r2_final[base].append(r2_total)
+        r2_final[base].append(r2_total)
         latent_factors[base].append(lf_total)
         #print(base +' mean R2:  %0.3f +/- %0.3f%%' %(np.mean(results[base]['R2']) , np.std(results[base]['R2'])))
         #print(base +' mean MSE: %0.3f +/- %0.3f' %(np.mean(results[base]['mse']) , np.std(results[base]['mse'])))
         #print(base +' mean Kc:  %0.3f +/- %0.3f' %(np.mean(results[base]['Kc']) , np.std(results[base]['Kc'])))
-    return latent_factors, #r2_final
+    return r2_final #, latent_factors
 
 #best_ss = []
 
-for database in my_dict.keys():
-    print("-----------------------")
-    print(database)
-    result = Baselines_func(10,'base', database, val=True)
-    #best_ss.append(result)
-    filename = database+"_LF_ss_tf_vf_5.pkl"
-    file1 = open("he_terminado.txt","w")
-    
-    with open(filename, "wb") as output:
-        pickle.dump(result, output)
+database = "wq"
+print("-----------------------")
+print(database)
+result = Baselines_func(10,'base', database, val=True)
+#best_ss.append(result)
+filename = database+"_r2_ss_tf_vf_5.pkl"
+file1 = open("he_terminado.txt","w")
+
+with open(filename, "wb") as output:
+    pickle.dump(result, output)
 
 # for database in paper_res:
 #     print("-----------------------")

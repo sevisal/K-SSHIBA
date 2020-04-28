@@ -155,7 +155,8 @@ def Baselines_func(folds, base, database, val=False):
     verboseprint = print if verbose else lambda *a, **k: None
     
     # bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR', '_KRR', '_SVRrbf', '_NN'] # Name of the baseline
-    bases = ['KPCA_LR', 'KCCA_LR']
+#    bases = ['KPCA_LR', 'KCCA_LR']
+    bases = ['KPCA_LR']
     r2_final= {'KPCA_LR': [], 'KCCA_LR': []}
     latent_factors = {'KPCA_LR': [], 'KCCA_LR': []}
     v_dim = np.arange(5,105,5)
@@ -356,7 +357,9 @@ def Baselines_func(folds, base, database, val=False):
 #     (opt, args) = parser.parse_args()   
 #     Baselines_func(opt.folds, opt.base)
     
-dbs = ["atp1d", "atp7d", "oes97", "edm", "jura", "slump", "oes10", "wq", "enb"]
+#dbs= ["oes10", "jura", "wq", "slump"]
+dbs = ["edm", "enb", "oes97"]
+#dbs = ["atp1d", "atp7d"]
 for database in dbs:
     print("-----------------------")
     print(database)
