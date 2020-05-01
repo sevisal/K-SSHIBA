@@ -1,0 +1,10 @@
+[workspace]
+restore_data_on_startup = True
+save_data_on_exit = True
+save_history = True
+save_non_project_files = False
+
+[main]
+version = 0.2.0
+recent_files = ['Baselines/extract_results_val.py', 'Baselines/test_sv.py', '../cv_cnn.py', 'Baselines/Pipeline_databases_class.py', 'lib/Prueba_FS_KSSHIBA.py', 'lib/sparse_ard.py', 'lib/fs_ksshiba_b.py']
+
