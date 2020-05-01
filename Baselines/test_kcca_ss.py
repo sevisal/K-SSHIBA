@@ -160,7 +160,7 @@ def Baselines_func(folds, base, database, val=False):
     r2_final= {'KCCA_LR': []}
     latent_factors = {'KCCA_LR': []}
     v_dim = np.arange(0.05,1.05,0.05)
-    R = 40
+    R = 10
     r2_tf_ss_5 = np.zeros((len(fold_tst), len(v_dim), R))
     fl_tf_ss_5 = np.zeros((len(fold_tst), len(v_dim), R))
     
@@ -337,9 +337,10 @@ def Baselines_func(folds, base, database, val=False):
 #     (opt, args) = parser.parse_args()   
 #     Baselines_func(opt.folds, opt.base)
 
-dbs = ["atp1d", "atp7d"]
+#dbs = ["atp1d", "atp7d"]
 #dbs= ["oes10", "jura", "wq", "slump"]
-#dbs = ["edm", "enb"]
+#dbs = ["oes10", "jura"]
+dbs = ["edm", "enb"]
 #dbs = ["oes97"]
 #dbs=["wq", "slump"]
 for database in dbs:
