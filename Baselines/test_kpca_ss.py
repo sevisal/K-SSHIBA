@@ -156,14 +156,14 @@ def Baselines_func(folds, base, database, val=False):
     verboseprint = print if verbose else lambda *a, **k: None
     
     # bases = ['KPCA_LR', 'KCCA_', 'KCCA_LR', '_KRR', '_SVRrbf', '_NN'] # Name of the baseline
-    bases = ['KCCA_LR']
-    r2_final= {'KCCA_LR': []}
-    latent_factors = {'KCCA_LR': []}
+    bases = ['KPCA_LR']
+    r2_final= {'KPCA_LR': []}
+    latent_factors = {'KPCA_LR': []}
     v_dim= np.arange(0.05,1.05,0.05)
     # v_dim = [0.001, 0.002, 0.003, 0.004, 0.005, 0.01, 0.02, 0.03, 0.04]
     # for st in stack:
     #     v_dim.append(st)
-    R = 20
+    R = 50
     r2_tf_ss_5 = np.zeros((len(fold_tst), len(v_dim), R))
     fl_tf_ss_5 = np.zeros((len(fold_tst), len(v_dim), R))
     
@@ -235,23 +235,23 @@ def Baselines_func(folds, base, database, val=False):
                             P_tst = P_tst[:, :Kc]
 
                             # verboseprint('... projections defined.')
-                        if pipeline[0] == 'KCCA':
-                            n_comp = int(ss*V.shape[0])
-                            if n_comp < Y_tr.shape[1]:
-                                print("ESTAMOS USANDO EL MiNIMO POSIBLE")
-                                n_comp = Y_tr.shape[1]
-                            kernelizer = Nystroem(kernel="rbf", 
-                                                  gamma=gamma[database][0], 
-                                                  n_components=n_comp)
-                            K_tr = kernelizer.fit_transform(X_tr)
-                            K_tst = kernelizer.transform(X_tst)
-                            # KCCA
-                            cca = CCA(n_components = Y_tr.shape[1]-1).fit(K_tr, Y_tr)
-                            results[base]['Kc'][i, p] = Y_tr.shape[1]-1
-                            P_tr = cca.transform(K_tr)
-                            P_tst = cca.transform(K_tst)
+                        # if pipeline[0] == 'KCCA':
+                        #     n_comp = int(ss*V.shape[0])
+                        #     if n_comp < Y_tr.shape[1]:
+                        #         print("ESTAMOS USANDO EL MÍNIMO POSIBLE")
+                        #         n_comp = Y_tr.shape[1]
+                        #     kernelizer = Nystroem(kernel="rbf", 
+                        #                           gamma=gamma[database][0], 
+                        #                           n_components=n_comp)
+                        #     K_tr = kernelizer.fit_transform(X_tr)
+                        #     K_tst = kernelizer.transform(X_tst)
+                        #     # KCCA
+                        #     cca = CCA(n_components = Y_tr.shape[1]-1).fit(K_tr, Y_tr)
+                        #     results[base]['Kc'][i, p] = Y_tr.shape[1]-1
+                        #     P_tr = cca.transform(K_tr)
+                        #     P_tst = cca.transform(K_tst)
 
-                            verboseprint('... projections defined.')
+                        #     verboseprint('... projections defined.')
                         else:
                             # No feature extraction and, therefore, no kernel used.
                             P_tr = np.copy(X_tr)
@@ -346,19 +346,20 @@ def Baselines_func(folds, base, database, val=False):
 #     (opt, args) = parser.parse_args()   
 #     Baselines_func(opt.folds, opt.base)
 
-dbs = ["atp1d", "atp7d"]
+#dbs = ["atp1d", "atp7d"]
 #dbs= ["oes10", "oes97"]
 #dbs = ["edm", "enb"]
-#dbs = ["jura", "wq"]
+dbs = ["jura", "wq"]
 #dbs = ["atp1d", "atp7d", "oes10", "oes97", "edm", "enb", "jura", "wq"]
 for database in dbs:
     print("-----------------------")
     print(database)
     r2_final, latent_factors = Baselines_func(10,'base', database)
-    filename = database+"_kcca_from1to100.pkl"
+    filename = database+"_kpca_from1to100.pkl"
     with open(filename, 'wb') as output:
         pickle.dump([r2_final, latent_factors], output, pickle.HIGHEST_PROTOCOL)
     
     
 file1 = open("he_terminado.txt","w")
         
+
