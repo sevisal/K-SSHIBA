@@ -28,47 +28,30 @@ stack_dict['enb'] =    []
 stack_dict['slump'] =  []
 
 
-def r2_on_validation():
-    results = {}    
-    for key in my_dict.keys():
-        filename = key+"_r2_ss_tf_vf_5.pkl"
-        if os.path.exists(filename):
-            print("------------------------------------------------")
-            print("Database trained: "+key)
-            my_dict[key].append(pickle.load( open( filename, "rb" )))
-          
-        if len(my_dict[key]): 
-            random_val_mean = {}
-            for base in my_dict[key][0].keys():
-                print("Baseline trained: " +base)
-                random_val_mean[base] = np.mean(my_dict[key][0][base][0], axis=(1,2,3))
-                index_max_r2 = np.argmax(random_val_mean[base])
-                print("R2 max: "+str(random_val_mean[base][index_max_r2]))
-                print("Using "+str(range(5,105,5)[index_max_r2])+" % of support vectors.")
-                plt.figure()
-                plt.plot(range(5,105,5), random_val_mean[base])
-                plt.xlabel("R2 score")
-                plt.ylabel("% of support vectors used")
-                plt.title(key+"_"+base)
-                plt.show()
-            results[key] = random_val_mean
-            
-    return results
 
-
-# stack = np.arange(0.05,0.55,0.05)
-# v_dim = [0.001, 0.002, 0.003, 0.004, 0.005, 0.01, 0.02, 0.03, 0.04]
-# for st in stack:
-#     v_dim.append(st)
-    
 v_dim = np.arange(0.05, 1.05, 0.05)
+# =============================================================================
+# KPCA FIGURAS
+show = "KPCA_LR"
+file = "_kpca_from1to100.pkl"
+file2 = "--"
+
+# =============================================================================
+
+# =============================================================================
+# KCCA FIGURAS
+# show = "KCCA_LR"
+# file = "_kcca_test.pkl"
+# file2 = "--"
+# =============================================================================
+
 
 results_r2 = {}
 results_lf = {}
 for key in my_dict.keys():
     stacked = False
-    filename = key+"_kpca_from1to100.pkl"
-    filename2 = key+"_kpca_tostack_test.pkl"
+    filename = key+file
+    filename2 = key+file2
     if os.path.exists(filename):
         print("------------------------------------------------")
         print("Database trained: "+key)
@@ -84,7 +67,7 @@ for key in my_dict.keys():
         lf_mean = {}
         lf_std = {}
         for base in my_dict[key][0][0].keys():
-            if base == 'KPCA_LR':
+            if base == show:
                 print("----KPCA_LR---")
                 print("R2 training")
                 print("Baseline trained: " +base)
