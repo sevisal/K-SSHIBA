@@ -252,11 +252,7 @@ def Baselines_func(folds, base, database, val=False):
                             P_tst = cca.transform(K_tst)
 
                             verboseprint('... projections defined.')
-                        else:
-                            # No feature extraction and, therefore, no kernel used.
-                            P_tr = np.copy(X_tr)
-                            P_tst = np.copy(X_tst)
-                            verboseprint('... no projections defined.')
+
                         
                         ############################
                         # Training the classifier. #
