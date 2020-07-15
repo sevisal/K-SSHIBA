@@ -8,20 +8,23 @@ import pyro.contrib.gp as gp
 
 class SparseELBO(nn.Module):
 
-    def __init__(self, X, V, fs, lr=1e-3):
+    def __init__(self, X, V, fs=True, lr=1e-3, verbose=False):
         '''
         This class optimizes the lengthscale of each dimension of the X and V data points
         to give ARD to the system.
         Parameters
         ----------
-        X : Numpy Array
+        X : Numpy Array.
             Data array with shape NxD containing the full data points to train.
-        V : Numpy Array
+        V : Numpy Array.
             Support vector array with shape N'xD (N'<<N) containing the points 
             to be used as support vectors.
+        fs : bool, optional.
+            Choose if you want to do feature selection or not.
         lr : float, optional
             Learning rate to the Adam optimizer. The default is 1e-3.
-
+        verbose: bool, optional.
+            Chose if you want to see optimizer's evolution during training
         Returns
         -------
         None.
@@ -31,6 +34,7 @@ class SparseELBO(nn.Module):
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.lr = lr
         self.loss = []
+        self.verbose=verbose
 
         self.X = torch.from_numpy(X).to(self.device)
         self.V = torch.from_numpy(V).to(self.device)
@@ -114,46 +118,16 @@ class SparseELBO(nn.Module):
         for i in range(it):
             self.opt.zero_grad()
             self.ELBO_loss = torch.sum(self.forward(ZAT))
-
+            if self.verbose:
+                if i%100==0:
+                    print("Loss: ",-self.ELBO_loss)
+                    print("Iterations: ",i)
             self.ELBO_loss.backward()
             self.loss.append(-self.ELBO_loss)
             self.opt.step()
 
 
-# Ejemplo de como usarlo:
-            
-# k = 5
-# n = 100
-# n_ = 20
-# d = 10
 
-# Z = np.random.randn(n,k)
-# W = np.random.randn(d,k)
-
-# X = np.hstack((np.dot(Z,W.T), np.ones((n,d))))
-        
-# V = np.copy(X)
-# V = V[:n_,:]
-
-# A = np.dot(V,np.vstack((W, np.random.randn(d,k))))
-
-
-# sp = SparseELBO(X,V, fs=1)
-# sp.sgd_step(Z@A.T, 10000)
-# l, k, v = sp.get_params()
-
-# plt.figure()
-# plt.plot(sp.loss)
-# plt.xlabel("Epochs")
-# plt.ylabel("Lower bound")
-# plt.show()
-
-# plt.figure()
-# plt.stem(l)
-# plt.ylabel("$\lambda_d$")
-# plt.xlabel("Dimensions of X")
-# plt.xticks(range(2*d))
-# plt.show()
 
 
 
